@@ -1,0 +1,1232 @@
+[
+  {
+    "source": "northstar analytics",
+    "target": "atlas gateway",
+    "context": "Northstar Analytics operates a cloud-based platform in which telemetry enters through the Atlas Gateway."
+  },
+  {
+    "source": "atlas gateway",
+    "target": "aurora event log",
+    "context": "Most events are written to the Aurora Event Log after entering through the Atlas Gateway."
+  },
+  {
+    "source": "aurora event log",
+    "target": "meridian analytics engine",
+    "context": "Events written to the Aurora Event Log are then processed by the Meridian Analytics Engine."
+  },
+  {
+    "source": "meridian analytics engine",
+    "target": "orion metadata store",
+    "context": "Meridian frequently requested equipment profiles, customer permissions, site configuration, and recent alert history from the Orion Metadata Store."
+  },
+  {
+    "source": "repeated access to the orion metadata store",
+    "target": "customer dashboards",
+    "context": "Repeated access to the Orion Metadata Store was the main source of delay and made customer dashboards slower during periods of heavy traffic."
+  },
+  {
+    "source": "meridian analytics engine",
+    "target": "helios",
+    "context": "The Cache Modernization Project introduced the distributed cache Helios and changed how Meridian retrieved metadata."
+  },
+  {
+    "source": "cache modernization project",
+    "target": "helios",
+    "context": "Northstar created the Cache Modernization Project to introduce a distributed cache called Helios."
+  },
+  {
+    "source": "cache modernization project",
+    "target": "sentinel observability service",
+    "context": "Northstar created the Cache Modernization Project to add new monitoring through the Sentinel Observability Service."
+  },
+  {
+    "source": "maya chen",
+    "target": "cache protocol",
+    "context": "Maya Chen designed the cache protocol for the Cache Modernization Project."
+  },
+  {
+    "source": "luis romero",
+    "target": "orion metadata store",
+    "context": "Luis Romero evaluated the effects of the cache modernization on Orion."
+  },
+  {
+    "source": "priya nair",
+    "target": "cache modernization project",
+    "context": "Priya Nair coordinated changes across services for the Cache Modernization Project."
+  },
+  {
+    "source": "owen brooks",
+    "target": "rollback and recovery procedures",
+    "context": "Owen Brooks prepared rollback and recovery procedures for the Cache Modernization Project."
+  },
+  {
+    "source": "atlas gateway",
+    "target": "authentication",
+    "context": "The Atlas Gateway accepts telemetry from customer devices and performs authentication."
+  },
+  {
+    "source": "atlas gateway",
+    "target": "schema validation",
+    "context": "The Atlas Gateway accepts telemetry from customer devices and performs schema validation."
+  },
+  {
+    "source": "atlas gateway",
+    "target": "basic rate limiting",
+    "context": "The Atlas Gateway accepts telemetry from customer devices and performs basic rate limiting."
+  },
+  {
+    "source": "data/backup.txt_chunk_0.0",
+    "target": "northstar analytics",
+    "context": "The chunk provides important evidence about northstar analytics."
+  },
+  {
+    "source": "data/backup.txt_chunk_0.0",
+    "target": "meridian analytics engine",
+    "context": "The chunk provides important evidence about meridian analytics engine."
+  },
+  {
+    "source": "data/backup.txt_chunk_0.0",
+    "target": "orion metadata store",
+    "context": "The chunk provides important evidence about orion metadata store."
+  },
+  {
+    "source": "data/backup.txt_chunk_0.0",
+    "target": "cache modernization project",
+    "context": "The chunk provides important evidence about cache modernization project."
+  },
+  {
+    "source": "maya chen",
+    "target": "cache protocol",
+    "context": "Maya Chen designed the cache protocol."
+  },
+  {
+    "source": "luis romero",
+    "target": "orion",
+    "context": "Luis Romero evaluated the effects on Orion."
+  },
+  {
+    "source": "priya nair",
+    "target": "service changes",
+    "context": "Priya Nair coordinated changes across services."
+  },
+  {
+    "source": "owen brooks",
+    "target": "rollback and recovery procedures",
+    "context": "Owen Brooks prepared rollback and recovery procedures."
+  },
+  {
+    "source": "atlas gateway",
+    "target": "aurora event log",
+    "context": "The Atlas Gateway appends valid events to the Aurora Event Log."
+  },
+  {
+    "source": "aurora event log",
+    "target": "meridian",
+    "context": "Aurora allows multiple downstream services, including Meridian, to consume the same event stream independently."
+  },
+  {
+    "source": "meridian",
+    "target": "orion",
+    "context": "Meridian reads events from Aurora and applies customer-specific processing rules that depend on metadata stored in Orion."
+  },
+  {
+    "source": "meridian",
+    "target": "local cache",
+    "context": "Before Helios was introduced, a Meridian worker contacted Orion whenever the required metadata was absent from its local memory."
+  },
+  {
+    "source": "local cache",
+    "target": "orion",
+    "context": "The local cache expired records after thirty seconds, so workers fell back to Orion for missing metadata."
+  },
+  {
+    "source": "related events handled by different workers",
+    "target": "orion",
+    "context": "The cache was ineffective when related events were handled by different workers, which led to repeated reads from Orion."
+  },
+  {
+    "source": "traffic spikes",
+    "target": "orion",
+    "context": "During traffic spikes, thousands of Meridian workers requested the same popular records from Orion."
+  },
+  {
+    "source": "orion",
+    "target": "query latency",
+    "context": "The database replicas remained available, but query latency increased as many workers requested the same records."
+  },
+  {
+    "source": "data/backup.txt_chunk_1.0",
+    "target": "orion",
+    "context": "The chunk provides important evidence about orion."
+  },
+  {
+    "source": "data/backup.txt_chunk_1.0",
+    "target": "aurora event log",
+    "context": "The chunk provides important evidence about aurora event log."
+  },
+  {
+    "source": "data/backup.txt_chunk_1.0",
+    "target": "meridian",
+    "context": "The chunk provides important evidence about meridian."
+  },
+  {
+    "source": "data/backup.txt_chunk_1.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  },
+  {
+    "source": "traffic spikes",
+    "target": "orion",
+    "context": "During traffic spikes, thousands of workers requested the same popular records from Orion."
+  },
+  {
+    "source": "duplicate traffic",
+    "target": "shared cache",
+    "context": "Luis concluded that a shared cache could remove a large portion of the duplicate traffic."
+  },
+  {
+    "source": "stale permissions or configuration",
+    "target": "incorrect analytics results",
+    "context": "Luis warned that stale permissions or configuration could produce incorrect analytics results."
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "Helios is a distributed, in-memory cache positioned between Meridian and Orion."
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "Helios is a distributed, in-memory cache positioned between Meridian and Orion."
+  },
+  {
+    "source": "helios",
+    "target": "metadata queries",
+    "context": "Helios stores frequently requested metadata and makes cached records available to every Meridian worker."
+  },
+  {
+    "source": "helios",
+    "target": "partition",
+    "context": "Helios divides records into partitions based on customer account identifiers."
+  },
+  {
+    "source": "customer account identifiers",
+    "target": "partition",
+    "context": "Helios divides records into partitions based on customer account identifiers."
+  },
+  {
+    "source": "partition",
+    "target": "primary node",
+    "context": "Each partition has one primary node."
+  },
+  {
+    "source": "partition",
+    "target": "replica nodes",
+    "context": "Each partition has two replica nodes."
+  },
+  {
+    "source": "primary node",
+    "target": "writes",
+    "context": "The primary accepts writes."
+  },
+  {
+    "source": "replica nodes",
+    "target": "reads",
+    "context": "Replicas serve reads when they are sufficiently up to date."
+  },
+  {
+    "source": "meridian",
+    "target": "helios",
+    "context": "When Meridian requires metadata, it first sends a lookup request to Helios."
+  },
+  {
+    "source": "helios",
+    "target": "cache hit",
+    "context": "If Helios contains a valid record, it returns the cached value and records a cache hit."
+  },
+  {
+    "source": "helios",
+    "target": "cache miss",
+    "context": "If the record is missing or expired, Helios records a cache miss and requests the value from Orion."
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "If the record is missing or expired, Helios requests the value from Orion."
+  },
+  {
+    "source": "orion",
+    "target": "helios",
+    "context": "When Helios fetches a missing or expired record from Orion, the returned value is placed in the appropriate partition before it is sent back to Meridian."
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "After Helios places the returned value in the appropriate partition, it sends the value back to Meridian."
+  },
+  {
+    "source": "data/backup.txt_chunk_2.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  },
+  {
+    "source": "data/backup.txt_chunk_2.0",
+    "target": "orion",
+    "context": "The chunk provides important evidence about orion."
+  },
+  {
+    "source": "data/backup.txt_chunk_2.0",
+    "target": "meridian",
+    "context": "The chunk provides important evidence about meridian."
+  },
+  {
+    "source": "data/backup.txt_chunk_2.0",
+    "target": "shared cache",
+    "context": "The chunk provides important evidence about shared cache."
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "When a record is missing or expired, Helios records a cache miss and requests the value from Orion."
+  },
+  {
+    "source": "orion",
+    "target": "helios",
+    "context": "Orion returns the requested value, which Helios places in the appropriate partition before sending it back to Meridian."
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "Helios sends the returned value back to Meridian after storing it in the appropriate partition."
+  },
+  {
+    "source": "helios",
+    "target": "cache key",
+    "context": "Helios constructs each cache key from the customer account, record type, and record identifier."
+  },
+  {
+    "source": "account identifier",
+    "target": "partition selection",
+    "context": "The account identifier is part of partition selection."
+  },
+  {
+    "source": "account identifier",
+    "target": "cache key",
+    "context": "The account identifier is part of cache key construction."
+  },
+  {
+    "source": "helios",
+    "target": "tenant isolation",
+    "context": "Priya required Helios to preserve tenant isolation so records from one customer account are never returned to another account, even when customers use the same equipment identifier."
+  },
+  {
+    "source": "expiration policy",
+    "target": "sentinel",
+    "context": "Sentinel monitors expiration behavior and reports when the observed lifetime of a record exceeds its configured policy."
+  },
+  {
+    "source": "expiration policy",
+    "target": "helios",
+    "context": "Helios uses different expiration policies for different metadata categories, including ten minutes for equipment descriptions, two minutes for alert thresholds, and thirty seconds for permission records."
+  },
+  {
+    "source": "northstar",
+    "target": "invalidation stream",
+    "context": "Northstar added an invalidation stream because expiration alone was not sufficient for records that required rapid updates."
+  },
+  {
+    "source": "data/backup.txt_chunk_3.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  },
+  {
+    "source": "data/backup.txt_chunk_3.0",
+    "target": "tenant isolation",
+    "context": "The chunk provides important evidence about tenant isolation."
+  },
+  {
+    "source": "data/backup.txt_chunk_3.0",
+    "target": "sentinel",
+    "context": "The chunk provides important evidence about sentinel."
+  },
+  {
+    "source": "data/backup.txt_chunk_3.0",
+    "target": "invalidation stream",
+    "context": "The chunk provides important evidence about invalidation stream."
+  },
+  {
+    "source": "sentinel",
+    "target": "expiration behavior",
+    "context": "Sentinel monitors expiration behavior and reports when the observed lifetime of a record exceeds its configured policy."
+  },
+  {
+    "source": "orion",
+    "target": "aurora",
+    "context": "Whenever Orion commits a change to a cacheable record, the database publishes an invalidation event to Aurora."
+  },
+  {
+    "source": "aurora",
+    "target": "helios",
+    "context": "Helios consumes invalidation events from Aurora and removes the corresponding cached records."
+  },
+  {
+    "source": "orion",
+    "target": "outbox record",
+    "context": "Orion first commits the database transaction and then writes an outbox record in the same transaction."
+  },
+  {
+    "source": "relay service",
+    "target": "aurora",
+    "context": "The Relay Service reads the outbox, publishes the invalidation event to Aurora, and marks the outbox record as delivered."
+  },
+  {
+    "source": "outbox record",
+    "target": "relay service",
+    "context": "The Relay Service reads the outbox record and uses it to publish pending invalidation events."
+  },
+  {
+    "source": "helios",
+    "target": "cacheable record",
+    "context": "Helios removes the affected key from the primary partition and its replicas after receiving the invalidation event."
+  },
+  {
+    "source": "relay service",
+    "target": "outbox record",
+    "context": "If the Relay Service temporarily stops, the outbox retains undelivered events until it restarts."
+  },
+  {
+    "source": "relay service",
+    "target": "stale cache entries",
+    "context": "When the Relay Service is down, delayed invalidations may extend the lifetime of stale cache entries, but the request is not permanently lost."
+  },
+  {
+    "source": "version numbers",
+    "target": "stale cache entries",
+    "context": "Maya added version numbers to reduce the effect of delayed invalidation events on stale cache entries."
+  },
+  {
+    "source": "data/backup.txt_chunk_4.0",
+    "target": "invalidation stream",
+    "context": "The chunk provides important evidence about invalidation stream."
+  },
+  {
+    "source": "data/backup.txt_chunk_4.0",
+    "target": "relay service",
+    "context": "The chunk provides important evidence about relay service."
+  },
+  {
+    "source": "data/backup.txt_chunk_4.0",
+    "target": "outbox record",
+    "context": "The chunk provides important evidence about outbox record."
+  },
+  {
+    "source": "data/backup.txt_chunk_4.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  },
+  {
+    "source": "relay service",
+    "target": "pending invalidations",
+    "context": "When the Relay Service restarts, it publishes the pending invalidations."
+  },
+  {
+    "source": "pending invalidations",
+    "target": "stale cache entries",
+    "context": "The delay in publishing invalidations may extend the lifetime of stale cache entries, but it does not permanently lose the invalidation request."
+  },
+  {
+    "source": "version numbers",
+    "target": "delayed events",
+    "context": "Maya added version numbers to reduce the effect of delayed events."
+  },
+  {
+    "source": "orion record",
+    "target": "version numbers",
+    "context": "Every Orion record includes a monotonically increasing version."
+  },
+  {
+    "source": "helios",
+    "target": "version numbers",
+    "context": "Helios stores the version alongside the cached value."
+  },
+  {
+    "source": "invalidation event",
+    "target": "version numbers",
+    "context": "An invalidation event also includes the new record version."
+  },
+  {
+    "source": "helios",
+    "target": "invalidation event",
+    "context": "If Helios receives an old invalidation after a newer value has already been cached, it compares the versions and ignores the outdated event."
+  },
+  {
+    "source": "helios",
+    "target": "version numbers",
+    "context": "Helios compares versions to ignore an outdated invalidation event when a newer value is already cached."
+  },
+  {
+    "source": "event reordering",
+    "target": "newer cached record",
+    "context": "Version comparison prevents event reordering from removing a newer cached record unnecessarily."
+  },
+  {
+    "source": "cache stampede protection",
+    "target": "cache stampede",
+    "context": "During early load tests, the team observed a cache stampede, motivating cache stampede protection."
+  },
+  {
+    "source": "popular record",
+    "target": "meridian workers",
+    "context": "When a popular record expired, hundreds of Meridian workers missed the same key at nearly the same time."
+  },
+  {
+    "source": "meridian workers",
+    "target": "orion query",
+    "context": "Each miss triggered a separate Orion query, temporarily recreating the original database load problem."
+  },
+  {
+    "source": "request coalescing",
+    "target": "cache stampede",
+    "context": "Maya introduced request coalescing to prevent the cache stampede behavior."
+  },
+  {
+    "source": "request coalescing",
+    "target": "in flight fetch",
+    "context": "The first miss for a key creates an in-flight fetch."
+  },
+  {
+    "source": "request coalescing",
+    "target": "orion query",
+    "context": "Later requests for the same key wait for the existing fetch instead of starting additional database queries."
+  },
+  {
+    "source": "orion",
+    "target": "helios",
+    "context": "When Orion returns the record, Helios completes the cache fill and releases all waiting requests with the same value."
+  },
+  {
+    "source": "data/backup.txt_chunk_5.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  },
+  {
+    "source": "data/backup.txt_chunk_5.0",
+    "target": "relay service",
+    "context": "The chunk provides important evidence about relay service."
+  },
+  {
+    "source": "data/backup.txt_chunk_5.0",
+    "target": "request coalescing",
+    "context": "The chunk provides important evidence about request coalescing."
+  },
+  {
+    "source": "data/backup.txt_chunk_5.0",
+    "target": "cache stampede protection",
+    "context": "The chunk provides important evidence about cache stampede protection."
+  },
+  {
+    "source": "request coalescing",
+    "target": "database queries",
+    "context": "Later requests for the same key wait for the existing fetch instead of starting additional database queries."
+  },
+  {
+    "source": "orion",
+    "target": "request coalescing",
+    "context": "When Orion returns the record, Helios completes the cache fill and releases all waiting requests with the same value."
+  },
+  {
+    "source": "request coalescing",
+    "target": "helios",
+    "context": "When Orion returns the record, Helios completes the cache fill and releases all waiting requests with the same value."
+  },
+  {
+    "source": "request coalescing",
+    "target": "fetch timeout",
+    "context": "To limit stalled requests, Helios applies a fetch timeout of eight hundred milliseconds."
+  },
+  {
+    "source": "fetch timeout",
+    "target": "fallback controller",
+    "context": "After the timeout, waiting requests may retry through another Helios node or use a controlled fallback path to Orion."
+  },
+  {
+    "source": "fallback controller",
+    "target": "rate limits",
+    "context": "Luis insisted that the fallback path include rate limits."
+  },
+  {
+    "source": "rate limits",
+    "target": "orion",
+    "context": "Without limits, a Helios outage could cause every Meridian worker to contact Orion directly and overwhelm the database."
+  },
+  {
+    "source": "meridian worker",
+    "target": "orion",
+    "context": "Without limits, a Helios outage could cause every Meridian worker to contact Orion directly and overwhelm the database."
+  },
+  {
+    "source": "fallback controller",
+    "target": "database",
+    "context": "The fallback controller grants a restricted number of direct database requests per customer account to avoid overwhelming the database."
+  },
+  {
+    "source": "fallback controller",
+    "target": "temporary metadata unavailable response",
+    "context": "Requests beyond the limit receive a temporary metadata-unavailable response, which Meridian records without discarding the original telemetry event."
+  },
+  {
+    "source": "heartbeat messages",
+    "target": "sentinel",
+    "context": "Helios nodes send heartbeat messages to Sentinel every five seconds."
+  },
+  {
+    "source": "sentinel",
+    "target": "primary cache node",
+    "context": "Sentinel marks a node as unhealthy after three consecutive heartbeat failures."
+  },
+  {
+    "source": "cluster coordinator",
+    "target": "replica promotion",
+    "context": "When a primary cache node becomes unhealthy, the Cluster Coordinator promotes the most up-to-date replica to primary."
+  },
+  {
+    "source": "cluster coordinator",
+    "target": "configuration distributor",
+    "context": "Meridian clients receive the new partition map through the Configuration Distributor."
+  },
+  {
+    "source": "configuration distributor",
+    "target": "partition map",
+    "context": "Meridian clients receive the new partition map through the Configuration Distributor."
+  },
+  {
+    "source": "data/backup.txt_chunk_6.0",
+    "target": "request coalescing",
+    "context": "The chunk provides important evidence about request coalescing."
+  },
+  {
+    "source": "data/backup.txt_chunk_6.0",
+    "target": "fallback controller",
+    "context": "The chunk provides important evidence about fallback controller."
+  },
+  {
+    "source": "data/backup.txt_chunk_6.0",
+    "target": "sentinel",
+    "context": "The chunk provides important evidence about sentinel."
+  },
+  {
+    "source": "data/backup.txt_chunk_6.0",
+    "target": "cluster coordinator",
+    "context": "The chunk provides important evidence about cluster coordinator."
+  },
+  {
+    "source": "sentinel",
+    "target": "node unhealthy",
+    "context": "Sentinel marks a node as unhealthy after three consecutive heartbeat failures."
+  },
+  {
+    "source": "heartbeat failures",
+    "target": "node unhealthy",
+    "context": "Three consecutive heartbeat failures cause Sentinel to mark a node as unhealthy."
+  },
+  {
+    "source": "primary cache node",
+    "target": "cluster coordinator",
+    "context": "When a primary cache node becomes unhealthy, the Cluster Coordinator promotes the most up-to-date replica to primary."
+  },
+  {
+    "source": "cluster coordinator",
+    "target": "primary",
+    "context": "The Cluster Coordinator promotes the most up-to-date replica to primary when the primary cache node becomes unhealthy."
+  },
+  {
+    "source": "cluster coordinator",
+    "target": "partition map",
+    "context": "Meridian clients receive the new partition map through the Configuration Distributor after promotion."
+  },
+  {
+    "source": "configuration distributor",
+    "target": "meridian clients",
+    "context": "The Configuration Distributor delivers the new partition map to Meridian clients."
+  },
+  {
+    "source": "promotion",
+    "target": "cache availability",
+    "context": "A promotion can briefly reduce cache availability."
+  },
+  {
+    "source": "cache availability",
+    "target": "meridian retries",
+    "context": "During the brief reduction in cache availability, Meridian retries failed lookups using exponential backoff."
+  },
+  {
+    "source": "meridian retries",
+    "target": "exponential backoff",
+    "context": "Meridian retries failed lookups using exponential backoff during the availability drop."
+  },
+  {
+    "source": "exponential backoff",
+    "target": "random jitter",
+    "context": "The retry strategy includes random jitter so that all workers do not contact the replacement node simultaneously."
+  },
+  {
+    "source": "cold start procedure",
+    "target": "cluster coordinator",
+    "context": "During cold start, the Cluster Coordinator activates warm-up mode."
+  },
+  {
+    "source": "cold start procedure",
+    "target": "warm up mode",
+    "context": "During cold start, the Cluster Coordinator activates warm-up mode."
+  },
+  {
+    "source": "helios partition",
+    "target": "replacement nodes",
+    "context": "If an entire Helios partition loses all replicas, the replacement nodes begin with empty memory."
+  },
+  {
+    "source": "replacement nodes",
+    "target": "orion",
+    "context": "During cold start, Meridian requests gradually refill the partition, but immediate unrestricted traffic could overload Orion."
+  },
+  {
+    "source": "warm up mode",
+    "target": "warm up service",
+    "context": "Warm-up mode limits concurrent cache fills and sends the top keys to the Warm-Up Service."
+  },
+  {
+    "source": "warm up mode",
+    "target": "top keys",
+    "context": "Warm-up mode prioritizes records that were most frequently requested before the failure and sends the top keys to the Warm-Up Service."
+  },
+  {
+    "source": "sentinel",
+    "target": "request frequency metrics",
+    "context": "Sentinel identifies high-demand records using request-frequency metrics collected from Helios."
+  },
+  {
+    "source": "request frequency metrics",
+    "target": "top keys",
+    "context": "Sentinel uses request-frequency metrics collected from Helios to identify the top keys."
+  },
+  {
+    "source": "warm up service",
+    "target": "orion",
+    "context": "The Warm-Up Service retrieves those records from Orion at a controlled rate."
+  },
+  {
+    "source": "warm up service",
+    "target": "cache misses",
+    "context": "This proactive loading reduces the number of user requests that encounter cache misses after recovery."
+  },
+  {
+    "source": "data/backup.txt_chunk_7.0",
+    "target": "sentinel",
+    "context": "The chunk provides important evidence about sentinel."
+  },
+  {
+    "source": "data/backup.txt_chunk_7.0",
+    "target": "cluster coordinator",
+    "context": "The chunk provides important evidence about cluster coordinator."
+  },
+  {
+    "source": "data/backup.txt_chunk_7.0",
+    "target": "warm up mode",
+    "context": "The chunk provides important evidence about warm up mode."
+  },
+  {
+    "source": "data/backup.txt_chunk_7.0",
+    "target": "cold start procedure",
+    "context": "The chunk provides important evidence about cold start procedure."
+  },
+  {
+    "source": "sentinel",
+    "target": "helios",
+    "context": "Sentinel identifies high-demand records using request-frequency metrics collected from Helios."
+  },
+  {
+    "source": "sentinel",
+    "target": "warm up service",
+    "context": "Sentinel sends the top keys to the Warm-Up Service for proactive loading."
+  },
+  {
+    "source": "warm up service",
+    "target": "cache miss",
+    "context": "This proactive loading reduces the number of user requests that encounter cache misses after recovery."
+  },
+  {
+    "source": "load test",
+    "target": "atlas",
+    "context": "On March 18, the team conducted a production-scale load test that increased Atlas traffic to fifteen million events per hour."
+  },
+  {
+    "source": "load test",
+    "target": "helios",
+    "context": "The load test intentionally terminated one Helios primary node."
+  },
+  {
+    "source": "replica promotion",
+    "target": "meridian latency",
+    "context": "The replica promotion completed successfully, but Meridian latency rose sharply several minutes later."
+  },
+  {
+    "source": "incident channel",
+    "target": "meridian latency",
+    "context": "Owen opened an incident channel after Meridian latency rose sharply."
+  },
+  {
+    "source": "incident channel",
+    "target": "sentinel",
+    "context": "Owen asked each service owner to report current metrics in the incident channel, and Sentinel reported a drop in Helios hit rate."
+  },
+  {
+    "source": "sentinel",
+    "target": "orion",
+    "context": "Sentinel showed that Orion query volume had tripled."
+  },
+  {
+    "source": "incident channel",
+    "target": "relay service",
+    "context": "The Relay Service appeared healthy when service owners reported current metrics in the incident channel."
+  },
+  {
+    "source": "orion",
+    "target": "permission records",
+    "context": "Luis discovered that most of the additional Orion queries involved permission records."
+  },
+  {
+    "source": "deployment configuration",
+    "target": "replacement nodes",
+    "context": "Priya reviewed the deployment configuration for the replacement nodes."
+  },
+  {
+    "source": "environment variable",
+    "target": "deployment configuration",
+    "context": "A malformed environment variable was interpreted as milliseconds by one component and seconds by another, creating the bad expiration setting in the deployment configuration."
+  },
+  {
+    "source": "permission records",
+    "target": "cache miss",
+    "context": "The short expiration caused frequent misses for permission records."
+  },
+  {
+    "source": "request coalescing",
+    "target": "orion",
+    "context": "Request coalescing could not fully protect Orion because permission requests were distributed across many different keys."
+  },
+  {
+    "source": "deployment configuration",
+    "target": "replacement nodes",
+    "context": "The team corrected the configuration and restarted the affected replacement nodes."
+  },
+  {
+    "source": "data/backup.txt_chunk_8.0",
+    "target": "sentinel",
+    "context": "The chunk provides important evidence about sentinel."
+  },
+  {
+    "source": "data/backup.txt_chunk_8.0",
+    "target": "warm up service",
+    "context": "The chunk provides important evidence about warm up service."
+  },
+  {
+    "source": "data/backup.txt_chunk_8.0",
+    "target": "load test",
+    "context": "The chunk provides important evidence about load test."
+  },
+  {
+    "source": "data/backup.txt_chunk_8.0",
+    "target": "deployment configuration",
+    "context": "The chunk provides important evidence about deployment configuration."
+  },
+  {
+    "source": "malformed environment variable",
+    "target": "request coalescing",
+    "context": "A malformed environment variable was interpreted as milliseconds by one component and seconds by another, which caused a short expiration and frequent misses that request coalescing could not fully absorb for Orion."
+  },
+  {
+    "source": "permission requests",
+    "target": "orion",
+    "context": "Permission requests were distributed across many different keys, which limited how well request coalescing could protect Orion."
+  },
+  {
+    "source": "configuration validation",
+    "target": "lower bound checks",
+    "context": "After the incident, Priya added lower-bound checks to the Configuration Distributor to improve configuration validation."
+  },
+  {
+    "source": "lower bound checks",
+    "target": "configuration distributor",
+    "context": "Priya added lower-bound checks to the Configuration Distributor after the incident."
+  },
+  {
+    "source": "sentinel",
+    "target": "configuration validation",
+    "context": "Sentinel monitored whether records exceeded their maximum lifetime, but it did not detect expiration values that were unexpectedly short, exposing a gap in configuration validation."
+  },
+  {
+    "source": "alert",
+    "target": "expected policy",
+    "context": "Maya added an alert that compares observed expiration behavior with the expected policy for each metadata category."
+  },
+  {
+    "source": "tenant isolation tests",
+    "target": "helios",
+    "context": "Because Helios serves many customer accounts, the security team performed dedicated tenant-isolation tests."
+  },
+  {
+    "source": "tenant isolation tests",
+    "target": "cache lookups",
+    "context": "The tenant-isolation tests generated identical equipment identifiers under different accounts and verified that cache lookups returned the correct account-specific records."
+  },
+  {
+    "source": "debugging endpoint",
+    "target": "authenticated account",
+    "context": "One test revealed that a debugging endpoint accepted a cache key without independently verifying the authenticated account."
+  },
+  {
+    "source": "engineering network",
+    "target": "debugging endpoint",
+    "context": "The debugging endpoint was available only inside the engineering network, but it could still expose metadata if an internal credential were misused."
+  },
+  {
+    "source": "priya",
+    "target": "debugging endpoint",
+    "context": "Priya disabled the debugging endpoint immediately after the test revealed the authentication gap."
+  },
+  {
+    "source": "diagnostic operation",
+    "target": "authenticated request",
+    "context": "Maya replaced the debugging endpoint with a diagnostic operation that derives the account identifier from the authenticated request rather than accepting it from user input."
+  },
+  {
+    "source": "data/backup.txt_chunk_9.0",
+    "target": "orion",
+    "context": "The chunk provides important evidence about orion."
+  },
+  {
+    "source": "data/backup.txt_chunk_9.0",
+    "target": "configuration validation",
+    "context": "The chunk provides important evidence about configuration validation."
+  },
+  {
+    "source": "data/backup.txt_chunk_9.0",
+    "target": "tenant isolation tests",
+    "context": "The chunk provides important evidence about tenant isolation tests."
+  },
+  {
+    "source": "data/backup.txt_chunk_9.0",
+    "target": "debugging endpoint",
+    "context": "The chunk provides important evidence about debugging endpoint."
+  },
+  {
+    "source": "endpoint",
+    "target": "engineering network",
+    "context": "The endpoint was available only inside the engineering network."
+  },
+  {
+    "source": "endpoint",
+    "target": "metadata",
+    "context": "The endpoint could still expose metadata if an internal credential were misused."
+  },
+  {
+    "source": "priya",
+    "target": "endpoint",
+    "context": "Priya disabled the endpoint immediately."
+  },
+  {
+    "source": "diagnostic operation",
+    "target": "authenticated request",
+    "context": "Maya replaced the endpoint with a diagnostic operation that derives the account identifier from the authenticated request rather than accepting it from user input."
+  },
+  {
+    "source": "diagnostic operation",
+    "target": "user input",
+    "context": "Maya replaced the endpoint with a diagnostic operation that derives the account identifier from the authenticated request rather than accepting it from user input."
+  },
+  {
+    "source": "security team",
+    "target": "audit records",
+    "context": "The security team required audit records for administrative cache invalidations."
+  },
+  {
+    "source": "administrative cache invalidations",
+    "target": "administrative console",
+    "context": "When an operator clears a customer’s cached data, the Administrative Console now records the operator, affected account, reason, timestamp, and number of removed keys."
+  },
+  {
+    "source": "administrative console",
+    "target": "audit records",
+    "context": "When an operator clears a customer’s cached data, the Administrative Console now records the operator, affected account, reason, timestamp, and number of removed keys."
+  },
+  {
+    "source": "sentinel",
+    "target": "security archive",
+    "context": "Sentinel forwards these audit records to the Security Archive."
+  },
+  {
+    "source": "security archive",
+    "target": "audit records",
+    "context": "Sentinel forwards these audit records to the Security Archive, where they are retained for one year."
+  },
+  {
+    "source": "northstar",
+    "target": "helios",
+    "context": "Northstar decided to deploy Helios gradually."
+  },
+  {
+    "source": "meridian",
+    "target": "orion",
+    "context": "During the first phase, Meridian continued reading from Orion while also sending shadow lookups to Helios."
+  },
+  {
+    "source": "meridian",
+    "target": "helios",
+    "context": "During the first phase, Meridian continued reading from Orion while also sending shadow lookups to Helios."
+  },
+  {
+    "source": "shadow lookups",
+    "target": "helios",
+    "context": "During the first phase, Meridian continued reading from Orion while also sending shadow lookups to Helios."
+  },
+  {
+    "source": "shadow responses",
+    "target": "customer results",
+    "context": "Shadow responses were not used for customer results."
+  },
+  {
+    "source": "shadow responses",
+    "target": "database values",
+    "context": "The shadow responses allowed the team to compare cached values with database values."
+  },
+  {
+    "source": "sentinel",
+    "target": "mismatch rate",
+    "context": "Any mismatch was recorded by Sentinel."
+  },
+  {
+    "source": "mismatch rate",
+    "target": "helios",
+    "context": "After the shadow phase produced an acceptable mismatch rate, five percent of customer traffic began using Helios responses."
+  },
+  {
+    "source": "owen",
+    "target": "helios",
+    "context": "Owen had authority to pause or reverse the rollout if any safety threshold was exceeded."
+  },
+  {
+    "source": "data/backup.txt_chunk_10.0",
+    "target": "endpoint",
+    "context": "The chunk provides important evidence about endpoint."
+  },
+  {
+    "source": "data/backup.txt_chunk_10.0",
+    "target": "administrative console",
+    "context": "The chunk provides important evidence about administrative console."
+  },
+  {
+    "source": "data/backup.txt_chunk_10.0",
+    "target": "northstar",
+    "context": "The chunk provides important evidence about northstar."
+  },
+  {
+    "source": "data/backup.txt_chunk_10.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  },
+  {
+    "source": "owen",
+    "target": "rollout",
+    "context": "Owen had authority to pause or reverse the rollout if any safety threshold was exceeded."
+  },
+  {
+    "source": "rollout",
+    "target": "safety threshold",
+    "context": "The rollout could be paused or reversed if any safety threshold was exceeded."
+  },
+  {
+    "source": "rollout",
+    "target": "orion",
+    "context": "At fifty percent rollout, Orion query traffic had fallen by forty-six percent and median dashboard latency had improved by twenty-eight percent."
+  },
+  {
+    "source": "rollout",
+    "target": "helios",
+    "context": "Priya adjusted partition weighting so large customers were distributed more evenly across Helios nodes during the rollout."
+  },
+  {
+    "source": "meridian",
+    "target": "helios",
+    "context": "At full deployment, Meridian uses Helios as its normal metadata source."
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "Orion remains the system of record, and all cache misses ultimately depend on Orion."
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "If Helios becomes unavailable, the controlled fallback path preserves limited operation while protecting Orion from uncontrolled traffic."
+  },
+  {
+    "source": "cache modernization project",
+    "target": "helios",
+    "context": "The Cache Modernization Project demonstrated that Helios reduced Orion load but also introduced invalidation, version tracking, partition management, failover, warm-up behavior, and new security requirements."
+  },
+  {
+    "source": "march incident",
+    "target": "replacement nodes",
+    "context": "The March incident was not caused by a failed promotion alone; the promotion introduced replacement nodes."
+  },
+  {
+    "source": "replacement nodes",
+    "target": "incorrect expiration configuration",
+    "context": "The replacement nodes loaded an incorrect expiration configuration."
+  },
+  {
+    "source": "incorrect expiration configuration",
+    "target": "permission misses",
+    "context": "The short expiration increased permission misses."
+  },
+  {
+    "source": "permission misses",
+    "target": "orion",
+    "context": "The increased misses raised Orion traffic."
+  },
+  {
+    "source": "data/backup.txt_chunk_11.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  },
+  {
+    "source": "data/backup.txt_chunk_11.0",
+    "target": "orion",
+    "context": "The chunk provides important evidence about orion."
+  },
+  {
+    "source": "data/backup.txt_chunk_11.0",
+    "target": "cache modernization project",
+    "context": "The chunk provides important evidence about cache modernization project."
+  },
+  {
+    "source": "data/backup.txt_chunk_11.0",
+    "target": "march incident",
+    "context": "The chunk provides important evidence about march incident."
+  },
+  {
+    "source": "promotion",
+    "target": "replacement nodes",
+    "context": "The March incident was not caused by a failed promotion alone; the promotion introduced replacement nodes."
+  },
+  {
+    "source": "permission misses",
+    "target": "orion traffic",
+    "context": "The increased misses raised Orion traffic."
+  },
+  {
+    "source": "northstar",
+    "target": "cache policy",
+    "context": "Northstar now treats cache policy as part of application correctness."
+  },
+  {
+    "source": "cache policy",
+    "target": "platform team",
+    "context": "Changes to expiration, invalidation, fallback limits, and tenant isolation require review from the platform team."
+  },
+  {
+    "source": "cache policy",
+    "target": "database team",
+    "context": "Changes to expiration, invalidation, fallback limits, and tenant isolation require review from the database team."
+  },
+  {
+    "source": "sentinel",
+    "target": "cache hit rate",
+    "context": "Sentinel continues to monitor cache hit rate."
+  },
+  {
+    "source": "sentinel",
+    "target": "invalidation delay",
+    "context": "Sentinel continues to monitor invalidation delay."
+  },
+  {
+    "source": "sentinel",
+    "target": "record lifetime",
+    "context": "Sentinel continues to monitor record lifetime."
+  },
+  {
+    "source": "sentinel",
+    "target": "node health",
+    "context": "Sentinel continues to monitor node health."
+  },
+  {
+    "source": "sentinel",
+    "target": "fallback usage",
+    "context": "Sentinel continues to monitor fallback usage."
+  },
+  {
+    "source": "sentinel",
+    "target": "orion query volume",
+    "context": "Sentinel continues to monitor Orion query volume."
+  },
+  {
+    "source": "helios",
+    "target": "dashboard speed",
+    "context": "Helios improved dashboard speed because it reused metadata across Meridian workers."
+  },
+  {
+    "source": "helios",
+    "target": "metadata",
+    "context": "Helios improved dashboard speed because it reused metadata across Meridian workers."
+  },
+  {
+    "source": "metadata",
+    "target": "meridian workers",
+    "context": "Helios reused metadata across Meridian workers."
+  },
+  {
+    "source": "orion",
+    "target": "reliable system behavior",
+    "context": "The system remained reliable because Orion stayed authoritative."
+  },
+  {
+    "source": "aurora",
+    "target": "durable invalidations",
+    "context": "The system remained reliable because Aurora carried durable invalidations."
+  },
+  {
+    "source": "version numbers",
+    "target": "reordered events",
+    "context": "The system remained reliable because version numbers handled reordered events."
+  },
+  {
+    "source": "request coalescing",
+    "target": "duplicate fills",
+    "context": "The system remained reliable because request coalescing reduced duplicate fills."
+  },
+  {
+    "source": "rate limited fallback",
+    "target": "database",
+    "context": "The system remained reliable because rate-limited fallback protected the database during failures."
+  },
+  {
+    "source": "data/backup.txt_chunk_12.0",
+    "target": "march incident",
+    "context": "The chunk provides important evidence about march incident."
+  },
+  {
+    "source": "data/backup.txt_chunk_12.0",
+    "target": "northstar",
+    "context": "The chunk provides important evidence about northstar."
+  },
+  {
+    "source": "data/backup.txt_chunk_12.0",
+    "target": "sentinel",
+    "context": "The chunk provides important evidence about sentinel."
+  },
+  {
+    "source": "data/backup.txt_chunk_12.0",
+    "target": "helios",
+    "context": "The chunk provides important evidence about helios."
+  }
+]

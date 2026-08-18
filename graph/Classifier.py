@@ -25,15 +25,17 @@ class GraphRAGDecision(BaseModel):
 class Classifier:
     def __init__(
         self,
-        project_root: str | Path = (
-            "/Users/harishkrishnan/native-graphrag-vectordb"
-        ),
+        project_root: str | Path | None = None,
     ) -> None:
-        self.project_root = Path(project_root).expanduser().resolve()
+        self.project_root = (
+            Path(project_root).expanduser().resolve()
+            if project_root
+            else Path(__file__).resolve().parents[1]
+        )
 
         # Keep the routing prompt separate from the graph-ingestion prompt.
         self.prompt_file = (
-            self.project_root / "graph/Classifier_Prompt.txt"
+            self.project_root / "graph/System_Prompt_Classifier.txt"
         )
 
         self.agent: Any | None = None

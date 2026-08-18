@@ -1,2 +1,7 @@
 /target
 .env
+/.venv
+__pycache__/
+*.pyc
+/data/last_semantic_results.json
+/data/query_vector.json

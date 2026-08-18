@@ -1,15 +1,25 @@
 use serde::{Deserialize, Serialize};
+use std::fs;
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct Chunk {
-    pub id: String,
-    pub content: String,
-    pub location: String,
+    #[serde(alias = "id")]
+    pub chunk_id: String,
+    #[serde(default)]
+    pub document_id: String,
+    #[serde(alias = "content")]
+    pub text: String,
+    #[serde(default)]
+    pub chunk_index: usize,
+    #[serde(alias = "location")]
+    pub source: String,
 }
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize, Clone)]
 pub struct VectorEntry {
     pub chunk_id: String,
+    #[serde(default)]
+    pub document_id: String,
     pub vector: Vec<f32>,
 }
 
@@ -18,25 +28,21 @@ pub struct VectorQuery {
     pub vector: Vec<f32>,
 }
 
-pub fn convert_chunk(file: &str) -> Vec<Chunk>{
-    let text = std::fs::read_to_string(file).unwrap();
-    let serialized: Vec<Chunk> = serde_json::from_str(&text).unwrap();
-    return serialized;
+fn read_json<T: serde::de::DeserializeOwned>(file: &str) -> Result<T, String> {
+    let text =
+        fs::read_to_string(file).map_err(|error| format!("Could not read {file}: {error}"))?;
+    serde_json::from_str(&text).map_err(|error| format!("Could not parse {file}: {error}"))
 }
 
-pub fn convert_to_json(c: &Chunk) -> String {
-    let e = serde_json::to_string(&c).unwrap();
-    return e;
+pub fn convert_chunk(file: &str) -> Result<Vec<Chunk>, String> {
+    read_json(file)
 }
 
-pub fn convert_vector(file: &str) -> Vec<VectorEntry>{
-    let text = std::fs::read_to_string(file).unwrap();
-    let serialized: Vec<VectorEntry> = serde_json::from_str(&text).unwrap();
-    return serialized;
+pub fn convert_vector(file: &str) -> Result<Vec<VectorEntry>, String> {
+    read_json(file)
 }
 
-pub fn read_query(file: &str) -> Vec<f32> {
-    let text = std::fs::read_to_string(file).unwrap();
-    let e: VectorQuery = serde_json::from_str(&text).unwrap();
-    return e.vector;
+pub fn read_query(file: &str) -> Result<Vec<f32>, String> {
+    let query: VectorQuery = read_json(file)?;
+    Ok(query.vector)
 }

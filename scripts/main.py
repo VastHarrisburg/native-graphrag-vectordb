@@ -1,16 +1,7 @@
-from sentence_transformers import SentenceTransformer
-from pathlib import Path;
-from processing import Processing
-import json
+"""Compatibility entry point for the unified pipeline CLI."""
 
-#query = "Why do cache misses slow down CPU performance?"
-#query_vector = Processing.convert_query(query); #put convert_query into write_query once everything works
-#Processing.write_query(query_vector); #put convert_query into write_query once everything works
-Processing.write_chunks("data/backup.txt", 2, 1);
-#Processing.create_embeddings("data/vectors.json");
+from pipeline import main
 
 
-
-
-
-
+if __name__ == "__main__":
+    main()

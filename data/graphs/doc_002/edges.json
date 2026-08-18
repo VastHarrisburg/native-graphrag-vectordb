@@ -1,0 +1,110 @@
+[
+  {
+    "source": "doc_002_chunk_000",
+    "target": "cedar client rollout",
+    "context": "doc_002_chunk_000 provides evidence about cedar client rollout.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "doc_002_chunk_000",
+    "target": "northstar",
+    "context": "doc_002_chunk_000 provides evidence about northstar.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "doc_002_chunk_000",
+    "target": "cedar",
+    "context": "doc_002_chunk_000 provides evidence about cedar.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "doc_002_chunk_000",
+    "target": "meridian analytics engine",
+    "context": "doc_002_chunk_000 provides evidence about meridian analytics engine.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "doc_002_chunk_000",
+    "target": "helios backed",
+    "context": "doc_002_chunk_000 provides evidence about helios backed.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "doc_002_chunk_000",
+    "target": "orion metadata store",
+    "context": "doc_002_chunk_000 provides evidence about orion metadata store.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "doc_002_chunk_000",
+    "target": "sentinel observability service",
+    "context": "doc_002_chunk_000 provides evidence about sentinel observability service.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "cedar client rollout",
+    "target": "northstar",
+    "context": "The Cedar Client Rollout connected the customer dashboard service to the Northstar metadata platform.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "northstar",
+    "target": "cedar",
+    "context": "The Cedar Client Rollout connected the customer dashboard service to the Northstar metadata platform.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "cedar",
+    "target": "meridian analytics engine",
+    "context": "Cedar reads processed telemetry from the Meridian Analytics Engine and displays alerts to warehouse operators.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "cedar",
+    "target": "orion metadata store",
+    "context": "Cedar adopted Helios-backed metadata lookups, which reduced repeated requests to the Orion Metadata Store.",
+    "evidence_chunk_id": "doc_002_chunk_000"
+  },
+  {
+    "source": "doc_002_chunk_001",
+    "target": "sentinel observability service",
+    "context": "doc_002_chunk_001 provides evidence about sentinel observability service.",
+    "evidence_chunk_id": "doc_002_chunk_001"
+  },
+  {
+    "source": "doc_002_chunk_001",
+    "target": "sentinel",
+    "context": "doc_002_chunk_001 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_002_chunk_001"
+  },
+  {
+    "source": "doc_002_chunk_001",
+    "target": "owen brooks",
+    "context": "doc_002_chunk_001 provides evidence about owen brooks.",
+    "evidence_chunk_id": "doc_002_chunk_001"
+  },
+  {
+    "source": "doc_002_chunk_001",
+    "target": "cedar",
+    "context": "doc_002_chunk_001 provides evidence about cedar.",
+    "evidence_chunk_id": "doc_002_chunk_001"
+  },
+  {
+    "source": "sentinel observability service",
+    "target": "sentinel",
+    "context": "The rollout also sent cache-hit, cache-miss, and fallback metrics to the Sentinel Observability Service.",
+    "evidence_chunk_id": "doc_002_chunk_001"
+  },
+  {
+    "source": "sentinel",
+    "target": "owen brooks",
+    "context": "Sentinel alerts allowed Owen Brooks to pause the Cedar rollout when fallback traffic exceeded its safety threshold.",
+    "evidence_chunk_id": "doc_002_chunk_001"
+  },
+  {
+    "source": "owen brooks",
+    "target": "cedar",
+    "context": "Sentinel alerts allowed Owen Brooks to pause the Cedar rollout when fallback traffic exceeded its safety threshold.",
+    "evidence_chunk_id": "doc_002_chunk_001"
+  }
+]

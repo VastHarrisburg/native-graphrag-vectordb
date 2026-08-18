@@ -1,0 +1,1562 @@
+[
+  {
+    "source": "doc_001_chunk_000",
+    "target": "northstar cache modernization project",
+    "context": "doc_001_chunk_000 provides evidence about northstar cache modernization project.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "doc_001_chunk_000",
+    "target": "overview northstar analytics",
+    "context": "doc_001_chunk_000 provides evidence about overview northstar analytics.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "doc_001_chunk_000",
+    "target": "customers",
+    "context": "doc_001_chunk_000 provides evidence about customers.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "doc_001_chunk_000",
+    "target": "most",
+    "context": "doc_001_chunk_000 provides evidence about most.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "doc_001_chunk_000",
+    "target": "atlas gateway",
+    "context": "doc_001_chunk_000 provides evidence about atlas gateway.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "doc_001_chunk_000",
+    "target": "aurora event log",
+    "context": "doc_001_chunk_000 provides evidence about aurora event log.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "doc_001_chunk_000",
+    "target": "meridian analytics engine",
+    "context": "doc_001_chunk_000 provides evidence about meridian analytics engine.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "most",
+    "target": "atlas gateway",
+    "context": "Most events entered the system through the Atlas Gateway, were written to the Aurora Event Log, and were then processed by the Meridian Analytics Engine.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "atlas gateway",
+    "target": "aurora event log",
+    "context": "Most events entered the system through the Atlas Gateway, were written to the Aurora Event Log, and were then processed by the Meridian Analytics Engine.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "aurora event log",
+    "target": "meridian analytics engine",
+    "context": "Most events entered the system through the Atlas Gateway, were written to the Aurora Event Log, and were then processed by the Meridian Analytics Engine.",
+    "evidence_chunk_id": "doc_001_chunk_000"
+  },
+  {
+    "source": "doc_001_chunk_001",
+    "target": "orion metadata store",
+    "context": "doc_001_chunk_001 provides evidence about orion metadata store.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "doc_001_chunk_001",
+    "target": "meridian",
+    "context": "doc_001_chunk_001 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "doc_001_chunk_001",
+    "target": "orion",
+    "context": "doc_001_chunk_001 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "doc_001_chunk_001",
+    "target": "many",
+    "context": "doc_001_chunk_001 provides evidence about many.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "doc_001_chunk_001",
+    "target": "each meridian",
+    "context": "doc_001_chunk_001 provides evidence about each meridian.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "orion metadata store",
+    "target": "orion",
+    "context": "The main source of delay was repeated access to the Orion Metadata Store.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "meridian",
+    "target": "orion",
+    "context": "Meridian frequently requested equipment profiles, customer permissions, site configuration, and recent alert history from Orion.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "meridian",
+    "target": "each meridian",
+    "context": "Each Meridian worker kept a small local cache, so one worker could not reuse data already fetched by another worker.",
+    "evidence_chunk_id": "doc_001_chunk_001"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "each meridian",
+    "context": "doc_001_chunk_002 provides evidence about each meridian.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "northstar",
+    "context": "doc_001_chunk_002 provides evidence about northstar.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "cache modernization project",
+    "context": "doc_001_chunk_002 provides evidence about cache modernization project.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "helios",
+    "context": "doc_001_chunk_002 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "meridian",
+    "context": "doc_001_chunk_002 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "sentinel observability service",
+    "context": "doc_001_chunk_002 provides evidence about sentinel observability service.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "maya chen",
+    "context": "doc_001_chunk_002 provides evidence about maya chen.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "luis romero",
+    "context": "doc_001_chunk_002 provides evidence about luis romero.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "priya nair",
+    "context": "doc_001_chunk_002 provides evidence about priya nair.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_002",
+    "target": "owen brooks",
+    "context": "doc_001_chunk_002 provides evidence about owen brooks.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "each meridian",
+    "target": "meridian",
+    "context": "Each Meridian worker kept a small local cache, so one worker could not reuse data already fetched by another worker.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "northstar",
+    "target": "cache modernization project",
+    "context": "To address the problem, Northstar created the Cache Modernization Project.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "The project introduced a distributed cache called Helios, changed how Meridian retrieved metadata, and added new monitoring through the Sentinel Observability Service.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "meridian",
+    "target": "sentinel observability service",
+    "context": "The project introduced a distributed cache called Helios, changed how Meridian retrieved metadata, and added new monitoring through the Sentinel Observability Service.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "maya chen",
+    "target": "luis romero",
+    "context": "The initial project team included Maya Chen, the principal systems engineer; Luis Romero, the database reliability lead; Priya Nair, the platform architect; and Owen Brooks, the incident-response manager.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "luis romero",
+    "target": "priya nair",
+    "context": "The initial project team included Maya Chen, the principal systems engineer; Luis Romero, the database reliability lead; Priya Nair, the platform architect; and Owen Brooks, the incident-response manager.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "priya nair",
+    "target": "owen brooks",
+    "context": "The initial project team included Maya Chen, the principal systems engineer; Luis Romero, the database reliability lead; Priya Nair, the platform architect; and Owen Brooks, the incident-response manager.",
+    "evidence_chunk_id": "doc_001_chunk_002"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "maya chen",
+    "context": "doc_001_chunk_003 provides evidence about maya chen.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "luis romero",
+    "context": "doc_001_chunk_003 provides evidence about luis romero.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "priya nair",
+    "context": "doc_001_chunk_003 provides evidence about priya nair.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "owen brooks",
+    "context": "doc_001_chunk_003 provides evidence about owen brooks.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "maya",
+    "context": "doc_001_chunk_003 provides evidence about maya.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "luis",
+    "context": "doc_001_chunk_003 provides evidence about luis.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "orion",
+    "context": "doc_001_chunk_003 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "priya",
+    "context": "doc_001_chunk_003 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "owen",
+    "context": "doc_001_chunk_003 provides evidence about owen.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "existing architecture the atlas gateway",
+    "context": "doc_001_chunk_003 provides evidence about existing architecture the atlas gateway.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "valid",
+    "context": "doc_001_chunk_003 provides evidence about valid.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "aurora event log",
+    "context": "doc_001_chunk_003 provides evidence about aurora event log.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_003",
+    "target": "aurora",
+    "context": "doc_001_chunk_003 provides evidence about aurora.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "owen brooks",
+    "target": "maya",
+    "context": "The initial project team included Maya Chen, the principal systems engineer; Luis Romero, the database reliability lead; Priya Nair, the platform architect; and Owen Brooks, the incident-response manager.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "maya",
+    "target": "luis",
+    "context": "The initial project team included Maya Chen, the principal systems engineer; Luis Romero, the database reliability lead; Priya Nair, the platform architect; and Owen Brooks, the incident-response manager.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "luis",
+    "target": "priya",
+    "context": "The initial project team included Maya Chen, the principal systems engineer; Luis Romero, the database reliability lead; Priya Nair, the platform architect; and Owen Brooks, the incident-response manager.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "priya",
+    "target": "owen",
+    "context": "The initial project team included Maya Chen, the principal systems engineer; Luis Romero, the database reliability lead; Priya Nair, the platform architect; and Owen Brooks, the incident-response manager.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "maya",
+    "target": "luis",
+    "context": "Maya designed the cache protocol, Luis evaluated the effects on Orion, Priya coordinated changes across services, and Owen prepared rollback and recovery procedures.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "luis",
+    "target": "orion",
+    "context": "Maya designed the cache protocol, Luis evaluated the effects on Orion, Priya coordinated changes across services, and Owen prepared rollback and recovery procedures.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "orion",
+    "target": "priya",
+    "context": "Maya designed the cache protocol, Luis evaluated the effects on Orion, Priya coordinated changes across services, and Owen prepared rollback and recovery procedures.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "priya",
+    "target": "owen",
+    "context": "Maya designed the cache protocol, Luis evaluated the effects on Orion, Priya coordinated changes across services, and Owen prepared rollback and recovery procedures.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "valid",
+    "target": "aurora event log",
+    "context": "Valid events are appended to the Aurora Event Log.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "aurora event log",
+    "target": "aurora",
+    "context": "Valid events are appended to the Aurora Event Log.",
+    "evidence_chunk_id": "doc_001_chunk_003"
+  },
+  {
+    "source": "doc_001_chunk_004",
+    "target": "aurora",
+    "context": "doc_001_chunk_004 provides evidence about aurora.",
+    "evidence_chunk_id": "doc_001_chunk_004"
+  },
+  {
+    "source": "doc_001_chunk_004",
+    "target": "meridian",
+    "context": "doc_001_chunk_004 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_004"
+  },
+  {
+    "source": "doc_001_chunk_004",
+    "target": "these",
+    "context": "doc_001_chunk_004 provides evidence about these.",
+    "evidence_chunk_id": "doc_001_chunk_004"
+  },
+  {
+    "source": "doc_001_chunk_004",
+    "target": "orion",
+    "context": "doc_001_chunk_004 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_004"
+  },
+  {
+    "source": "aurora",
+    "target": "meridian",
+    "context": "Meridian reads events from Aurora and applies customer-specific processing rules.",
+    "evidence_chunk_id": "doc_001_chunk_004"
+  },
+  {
+    "source": "these",
+    "target": "orion",
+    "context": "These rules depend on metadata stored in Orion.",
+    "evidence_chunk_id": "doc_001_chunk_004"
+  },
+  {
+    "source": "doc_001_chunk_005",
+    "target": "orion",
+    "context": "doc_001_chunk_005 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_005"
+  },
+  {
+    "source": "doc_001_chunk_005",
+    "target": "helios",
+    "context": "doc_001_chunk_005 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_005"
+  },
+  {
+    "source": "doc_001_chunk_005",
+    "target": "meridian",
+    "context": "doc_001_chunk_005 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_005"
+  },
+  {
+    "source": "orion",
+    "target": "helios",
+    "context": "Before Helios was introduced, a Meridian worker contacted Orion whenever the required metadata was absent from its local memory.",
+    "evidence_chunk_id": "doc_001_chunk_005"
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "Before Helios was introduced, a Meridian worker contacted Orion whenever the required metadata was absent from its local memory.",
+    "evidence_chunk_id": "doc_001_chunk_005"
+  },
+  {
+    "source": "doc_001_chunk_006",
+    "target": "orion",
+    "context": "doc_001_chunk_006 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_006"
+  },
+  {
+    "source": "doc_001_chunk_006",
+    "target": "luis",
+    "context": "doc_001_chunk_006 provides evidence about luis.",
+    "evidence_chunk_id": "doc_001_chunk_006"
+  },
+  {
+    "source": "doc_001_chunk_006",
+    "target": "meridian",
+    "context": "doc_001_chunk_006 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_006"
+  },
+  {
+    "source": "luis",
+    "target": "meridian",
+    "context": "Luis found that approximately sixty-four percent of Meridian’s metadata queries requested records that another worker had fetched during the previous two minutes.",
+    "evidence_chunk_id": "doc_001_chunk_006"
+  },
+  {
+    "source": "doc_001_chunk_007",
+    "target": "helios design helios",
+    "context": "doc_001_chunk_007 provides evidence about helios design helios.",
+    "evidence_chunk_id": "doc_001_chunk_007"
+  },
+  {
+    "source": "doc_001_chunk_007",
+    "target": "meridian and orion",
+    "context": "doc_001_chunk_007 provides evidence about meridian and orion.",
+    "evidence_chunk_id": "doc_001_chunk_007"
+  },
+  {
+    "source": "doc_001_chunk_007",
+    "target": "meridian",
+    "context": "doc_001_chunk_007 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_007"
+  },
+  {
+    "source": "doc_001_chunk_007",
+    "target": "helios",
+    "context": "doc_001_chunk_007 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_007"
+  },
+  {
+    "source": "meridian and orion",
+    "target": "meridian",
+    "context": "Helios Design\n\nHelios is a distributed, in-memory cache positioned between Meridian and Orion.",
+    "evidence_chunk_id": "doc_001_chunk_007"
+  },
+  {
+    "source": "meridian",
+    "target": "helios",
+    "context": "Helios Design\n\nHelios is a distributed, in-memory cache positioned between Meridian and Orion.",
+    "evidence_chunk_id": "doc_001_chunk_007"
+  },
+  {
+    "source": "doc_001_chunk_008",
+    "target": "helios",
+    "context": "doc_001_chunk_008 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_008"
+  },
+  {
+    "source": "doc_001_chunk_008",
+    "target": "each",
+    "context": "doc_001_chunk_008 provides evidence about each.",
+    "evidence_chunk_id": "doc_001_chunk_008"
+  },
+  {
+    "source": "doc_001_chunk_008",
+    "target": "when meridian",
+    "context": "doc_001_chunk_008 provides evidence about when meridian.",
+    "evidence_chunk_id": "doc_001_chunk_008"
+  },
+  {
+    "source": "helios",
+    "target": "when meridian",
+    "context": "When Meridian requires metadata, it first sends a lookup request to Helios.",
+    "evidence_chunk_id": "doc_001_chunk_008"
+  },
+  {
+    "source": "doc_001_chunk_009",
+    "target": "helios",
+    "context": "doc_001_chunk_009 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_009"
+  },
+  {
+    "source": "doc_001_chunk_009",
+    "target": "orion",
+    "context": "doc_001_chunk_009 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_009"
+  },
+  {
+    "source": "doc_001_chunk_009",
+    "target": "meridian",
+    "context": "doc_001_chunk_009 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_009"
+  },
+  {
+    "source": "doc_001_chunk_009",
+    "target": "priya",
+    "context": "doc_001_chunk_009 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_009"
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "If the record is missing or expired, Helios records a cache miss and requests the value from Orion.",
+    "evidence_chunk_id": "doc_001_chunk_009"
+  },
+  {
+    "source": "helios",
+    "target": "priya",
+    "context": "Priya required Helios to preserve tenant isolation.",
+    "evidence_chunk_id": "doc_001_chunk_009"
+  },
+  {
+    "source": "doc_001_chunk_010",
+    "target": "priya",
+    "context": "doc_001_chunk_010 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_010"
+  },
+  {
+    "source": "doc_001_chunk_010",
+    "target": "helios",
+    "context": "doc_001_chunk_010 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_010"
+  },
+  {
+    "source": "doc_001_chunk_010",
+    "target": "records",
+    "context": "doc_001_chunk_010 provides evidence about records.",
+    "evidence_chunk_id": "doc_001_chunk_010"
+  },
+  {
+    "source": "priya",
+    "target": "helios",
+    "context": "Priya required Helios to preserve tenant isolation.",
+    "evidence_chunk_id": "doc_001_chunk_010"
+  },
+  {
+    "source": "doc_001_chunk_011",
+    "target": "equipment",
+    "context": "doc_001_chunk_011 provides evidence about equipment.",
+    "evidence_chunk_id": "doc_001_chunk_011"
+  },
+  {
+    "source": "doc_001_chunk_011",
+    "target": "alert",
+    "context": "doc_001_chunk_011 provides evidence about alert.",
+    "evidence_chunk_id": "doc_001_chunk_011"
+  },
+  {
+    "source": "doc_001_chunk_011",
+    "target": "permission",
+    "context": "doc_001_chunk_011 provides evidence about permission.",
+    "evidence_chunk_id": "doc_001_chunk_011"
+  },
+  {
+    "source": "doc_001_chunk_011",
+    "target": "sentinel",
+    "context": "doc_001_chunk_011 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_011"
+  },
+  {
+    "source": "doc_001_chunk_012",
+    "target": "sentinel",
+    "context": "doc_001_chunk_012 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_012"
+  },
+  {
+    "source": "doc_001_chunk_012",
+    "target": "invalidation and consistency expiration",
+    "context": "doc_001_chunk_012 provides evidence about invalidation and consistency expiration.",
+    "evidence_chunk_id": "doc_001_chunk_012"
+  },
+  {
+    "source": "doc_001_chunk_012",
+    "target": "northstar",
+    "context": "doc_001_chunk_012 provides evidence about northstar.",
+    "evidence_chunk_id": "doc_001_chunk_012"
+  },
+  {
+    "source": "doc_001_chunk_012",
+    "target": "orion",
+    "context": "doc_001_chunk_012 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_012"
+  },
+  {
+    "source": "doc_001_chunk_012",
+    "target": "aurora",
+    "context": "doc_001_chunk_012 provides evidence about aurora.",
+    "evidence_chunk_id": "doc_001_chunk_012"
+  },
+  {
+    "source": "doc_001_chunk_012",
+    "target": "helios",
+    "context": "doc_001_chunk_012 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_012"
+  },
+  {
+    "source": "orion",
+    "target": "aurora",
+    "context": "Whenever Orion commits a change to a cacheable record, the database publishes an invalidation event to Aurora.",
+    "evidence_chunk_id": "doc_001_chunk_012"
+  },
+  {
+    "source": "doc_001_chunk_013",
+    "target": "helios",
+    "context": "doc_001_chunk_013 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_013"
+  },
+  {
+    "source": "doc_001_chunk_013",
+    "target": "orion",
+    "context": "doc_001_chunk_013 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_013"
+  },
+  {
+    "source": "doc_001_chunk_013",
+    "target": "relay service",
+    "context": "doc_001_chunk_013 provides evidence about relay service.",
+    "evidence_chunk_id": "doc_001_chunk_013"
+  },
+  {
+    "source": "doc_001_chunk_013",
+    "target": "aurora",
+    "context": "doc_001_chunk_013 provides evidence about aurora.",
+    "evidence_chunk_id": "doc_001_chunk_013"
+  },
+  {
+    "source": "relay service",
+    "target": "aurora",
+    "context": "The Relay Service reads the outbox, publishes the invalidation event to Aurora, and marks the outbox record as delivered.",
+    "evidence_chunk_id": "doc_001_chunk_013"
+  },
+  {
+    "source": "doc_001_chunk_014",
+    "target": "relay service",
+    "context": "doc_001_chunk_014 provides evidence about relay service.",
+    "evidence_chunk_id": "doc_001_chunk_014"
+  },
+  {
+    "source": "doc_001_chunk_014",
+    "target": "aurora",
+    "context": "doc_001_chunk_014 provides evidence about aurora.",
+    "evidence_chunk_id": "doc_001_chunk_014"
+  },
+  {
+    "source": "doc_001_chunk_014",
+    "target": "helios",
+    "context": "doc_001_chunk_014 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_014"
+  },
+  {
+    "source": "aurora",
+    "target": "helios",
+    "context": "Helios receives the event from Aurora and removes the affected key from the primary partition and its replicas.",
+    "evidence_chunk_id": "doc_001_chunk_014"
+  },
+  {
+    "source": "doc_001_chunk_015",
+    "target": "relay service",
+    "context": "doc_001_chunk_015 provides evidence about relay service.",
+    "evidence_chunk_id": "doc_001_chunk_015"
+  },
+  {
+    "source": "doc_001_chunk_015",
+    "target": "maya",
+    "context": "doc_001_chunk_015 provides evidence about maya.",
+    "evidence_chunk_id": "doc_001_chunk_015"
+  },
+  {
+    "source": "doc_001_chunk_015",
+    "target": "orion",
+    "context": "doc_001_chunk_015 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_015"
+  },
+  {
+    "source": "doc_001_chunk_015",
+    "target": "helios",
+    "context": "doc_001_chunk_015 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_015"
+  },
+  {
+    "source": "doc_001_chunk_016",
+    "target": "helios",
+    "context": "doc_001_chunk_016 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_016"
+  },
+  {
+    "source": "doc_001_chunk_016",
+    "target": "cache stampede protection during",
+    "context": "doc_001_chunk_016 provides evidence about cache stampede protection during.",
+    "evidence_chunk_id": "doc_001_chunk_016"
+  },
+  {
+    "source": "doc_001_chunk_017",
+    "target": "cache stampede protection during",
+    "context": "doc_001_chunk_017 provides evidence about cache stampede protection during.",
+    "evidence_chunk_id": "doc_001_chunk_017"
+  },
+  {
+    "source": "doc_001_chunk_017",
+    "target": "meridian",
+    "context": "doc_001_chunk_017 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_017"
+  },
+  {
+    "source": "doc_001_chunk_017",
+    "target": "each",
+    "context": "doc_001_chunk_017 provides evidence about each.",
+    "evidence_chunk_id": "doc_001_chunk_017"
+  },
+  {
+    "source": "doc_001_chunk_017",
+    "target": "orion",
+    "context": "doc_001_chunk_017 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_017"
+  },
+  {
+    "source": "doc_001_chunk_017",
+    "target": "maya",
+    "context": "doc_001_chunk_017 provides evidence about maya.",
+    "evidence_chunk_id": "doc_001_chunk_017"
+  },
+  {
+    "source": "each",
+    "target": "orion",
+    "context": "Each miss triggered a separate Orion query, temporarily recreating the original database load problem.",
+    "evidence_chunk_id": "doc_001_chunk_017"
+  },
+  {
+    "source": "doc_001_chunk_018",
+    "target": "later",
+    "context": "doc_001_chunk_018 provides evidence about later.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "doc_001_chunk_018",
+    "target": "when orion",
+    "context": "doc_001_chunk_018 provides evidence about when orion.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "doc_001_chunk_018",
+    "target": "helios",
+    "context": "doc_001_chunk_018 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "doc_001_chunk_018",
+    "target": "request",
+    "context": "doc_001_chunk_018 provides evidence about request.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "doc_001_chunk_018",
+    "target": "orion",
+    "context": "doc_001_chunk_018 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "when orion",
+    "target": "helios",
+    "context": "When Orion returns the record, Helios completes the cache fill and releases all waiting requests with the same value.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "When Orion returns the record, Helios completes the cache fill and releases all waiting requests with the same value.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "request",
+    "target": "orion",
+    "context": "If the original Orion request stalled, every waiting request for that key also stalled.",
+    "evidence_chunk_id": "doc_001_chunk_018"
+  },
+  {
+    "source": "doc_001_chunk_019",
+    "target": "orion",
+    "context": "doc_001_chunk_019 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_019"
+  },
+  {
+    "source": "doc_001_chunk_019",
+    "target": "helios",
+    "context": "doc_001_chunk_019 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_019"
+  },
+  {
+    "source": "doc_001_chunk_019",
+    "target": "luis",
+    "context": "doc_001_chunk_019 provides evidence about luis.",
+    "evidence_chunk_id": "doc_001_chunk_019"
+  },
+  {
+    "source": "doc_001_chunk_019",
+    "target": "meridian",
+    "context": "doc_001_chunk_019 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_019"
+  },
+  {
+    "source": "orion",
+    "target": "helios",
+    "context": "After the timeout, waiting requests may either retry through another Helios node or use a controlled fallback path to Orion.",
+    "evidence_chunk_id": "doc_001_chunk_019"
+  },
+  {
+    "source": "orion",
+    "target": "helios",
+    "context": "Without limits, a Helios outage could cause every Meridian worker to contact Orion directly and overwhelm the database.",
+    "evidence_chunk_id": "doc_001_chunk_019"
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "Without limits, a Helios outage could cause every Meridian worker to contact Orion directly and overwhelm the database.",
+    "evidence_chunk_id": "doc_001_chunk_019"
+  },
+  {
+    "source": "doc_001_chunk_020",
+    "target": "helios",
+    "context": "doc_001_chunk_020 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "doc_001_chunk_020",
+    "target": "meridian",
+    "context": "doc_001_chunk_020 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "doc_001_chunk_020",
+    "target": "orion",
+    "context": "doc_001_chunk_020 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "doc_001_chunk_020",
+    "target": "requests",
+    "context": "doc_001_chunk_020 provides evidence about requests.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "doc_001_chunk_020",
+    "target": "failure handling helios",
+    "context": "doc_001_chunk_020 provides evidence about failure handling helios.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "doc_001_chunk_020",
+    "target": "sentinel",
+    "context": "doc_001_chunk_020 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "meridian",
+    "target": "orion",
+    "context": "Without limits, a Helios outage could cause every Meridian worker to contact Orion directly and overwhelm the database.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "meridian",
+    "target": "requests",
+    "context": "Requests beyond the limit receive a temporary metadata-unavailable response, which Meridian records without discarding the original telemetry event.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "helios",
+    "target": "sentinel",
+    "context": "Failure Handling\n\nHelios nodes send heartbeat messages to Sentinel every five seconds.",
+    "evidence_chunk_id": "doc_001_chunk_020"
+  },
+  {
+    "source": "doc_001_chunk_021",
+    "target": "sentinel",
+    "context": "doc_001_chunk_021 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_021"
+  },
+  {
+    "source": "doc_001_chunk_021",
+    "target": "cluster coordinator",
+    "context": "doc_001_chunk_021 provides evidence about cluster coordinator.",
+    "evidence_chunk_id": "doc_001_chunk_021"
+  },
+  {
+    "source": "doc_001_chunk_021",
+    "target": "meridian",
+    "context": "doc_001_chunk_021 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_021"
+  },
+  {
+    "source": "doc_001_chunk_021",
+    "target": "configuration distributor",
+    "context": "doc_001_chunk_021 provides evidence about configuration distributor.",
+    "evidence_chunk_id": "doc_001_chunk_021"
+  },
+  {
+    "source": "meridian",
+    "target": "configuration distributor",
+    "context": "Meridian clients receive the new partition map through the Configuration Distributor.",
+    "evidence_chunk_id": "doc_001_chunk_021"
+  },
+  {
+    "source": "doc_001_chunk_022",
+    "target": "meridian",
+    "context": "doc_001_chunk_022 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_022"
+  },
+  {
+    "source": "doc_001_chunk_022",
+    "target": "retries",
+    "context": "doc_001_chunk_022 provides evidence about retries.",
+    "evidence_chunk_id": "doc_001_chunk_022"
+  },
+  {
+    "source": "doc_001_chunk_022",
+    "target": "helios",
+    "context": "doc_001_chunk_022 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_022"
+  },
+  {
+    "source": "meridian",
+    "target": "retries",
+    "context": "During this interval, Meridian retries failed lookups using exponential backoff.",
+    "evidence_chunk_id": "doc_001_chunk_022"
+  },
+  {
+    "source": "doc_001_chunk_023",
+    "target": "helios",
+    "context": "doc_001_chunk_023 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "doc_001_chunk_023",
+    "target": "meridian",
+    "context": "doc_001_chunk_023 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "doc_001_chunk_023",
+    "target": "orion",
+    "context": "doc_001_chunk_023 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "doc_001_chunk_023",
+    "target": "cluster coordinator",
+    "context": "doc_001_chunk_023 provides evidence about cluster coordinator.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "doc_001_chunk_023",
+    "target": "warm up",
+    "context": "doc_001_chunk_023 provides evidence about warm up.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "doc_001_chunk_023",
+    "target": "sentinel",
+    "context": "doc_001_chunk_023 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "meridian",
+    "target": "orion",
+    "context": "Meridian requests gradually refill the partition, but immediate unrestricted traffic could overload Orion.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "helios",
+    "target": "sentinel",
+    "context": "Sentinel identifies high-demand records using request-frequency metrics collected from Helios.",
+    "evidence_chunk_id": "doc_001_chunk_023"
+  },
+  {
+    "source": "doc_001_chunk_024",
+    "target": "sentinel",
+    "context": "doc_001_chunk_024 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "doc_001_chunk_024",
+    "target": "helios",
+    "context": "doc_001_chunk_024 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "doc_001_chunk_024",
+    "target": "warm up service",
+    "context": "doc_001_chunk_024 provides evidence about warm up service.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "doc_001_chunk_024",
+    "target": "orion",
+    "context": "doc_001_chunk_024 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "doc_001_chunk_024",
+    "target": "march load test incident on",
+    "context": "doc_001_chunk_024 provides evidence about march load test incident on.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "doc_001_chunk_024",
+    "target": "march",
+    "context": "doc_001_chunk_024 provides evidence about march.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "doc_001_chunk_024",
+    "target": "atlas",
+    "context": "doc_001_chunk_024 provides evidence about atlas.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "sentinel",
+    "target": "helios",
+    "context": "Sentinel identifies high-demand records using request-frequency metrics collected from Helios.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "helios",
+    "target": "atlas",
+    "context": "The test increased Atlas traffic to fifteen million events per hour and intentionally terminated one Helios primary node.",
+    "evidence_chunk_id": "doc_001_chunk_024"
+  },
+  {
+    "source": "doc_001_chunk_025",
+    "target": "atlas",
+    "context": "doc_001_chunk_025 provides evidence about atlas.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "doc_001_chunk_025",
+    "target": "helios",
+    "context": "doc_001_chunk_025 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "doc_001_chunk_025",
+    "target": "meridian",
+    "context": "doc_001_chunk_025 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "doc_001_chunk_025",
+    "target": "owen",
+    "context": "doc_001_chunk_025 provides evidence about owen.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "doc_001_chunk_025",
+    "target": "sentinel",
+    "context": "doc_001_chunk_025 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "doc_001_chunk_025",
+    "target": "orion",
+    "context": "doc_001_chunk_025 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "doc_001_chunk_025",
+    "target": "relay service",
+    "context": "doc_001_chunk_025 provides evidence about relay service.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "atlas",
+    "target": "helios",
+    "context": "The test increased Atlas traffic to fifteen million events per hour and intentionally terminated one Helios primary node.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "helios",
+    "target": "sentinel",
+    "context": "Sentinel showed that Helios hit rate had fallen from eighty-eight percent to forty-one percent.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "orion",
+    "target": "relay service",
+    "context": "Orion query volume had tripled, while the Relay Service appeared healthy.",
+    "evidence_chunk_id": "doc_001_chunk_025"
+  },
+  {
+    "source": "doc_001_chunk_026",
+    "target": "orion",
+    "context": "doc_001_chunk_026 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_026"
+  },
+  {
+    "source": "doc_001_chunk_026",
+    "target": "relay service",
+    "context": "doc_001_chunk_026 provides evidence about relay service.",
+    "evidence_chunk_id": "doc_001_chunk_026"
+  },
+  {
+    "source": "doc_001_chunk_026",
+    "target": "luis",
+    "context": "doc_001_chunk_026 provides evidence about luis.",
+    "evidence_chunk_id": "doc_001_chunk_026"
+  },
+  {
+    "source": "doc_001_chunk_026",
+    "target": "priya",
+    "context": "doc_001_chunk_026 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_026"
+  },
+  {
+    "source": "orion",
+    "target": "luis",
+    "context": "Luis compared Orion query patterns with the affected cache partition and discovered that most additional queries involved permission records.",
+    "evidence_chunk_id": "doc_001_chunk_026"
+  },
+  {
+    "source": "doc_001_chunk_027",
+    "target": "orion",
+    "context": "doc_001_chunk_027 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_027"
+  },
+  {
+    "source": "doc_001_chunk_027",
+    "target": "within",
+    "context": "doc_001_chunk_027 provides evidence about within.",
+    "evidence_chunk_id": "doc_001_chunk_027"
+  },
+  {
+    "source": "orion",
+    "target": "within",
+    "context": "Within twelve minutes, Orion query volume returned to its expected range.",
+    "evidence_chunk_id": "doc_001_chunk_027"
+  },
+  {
+    "source": "doc_001_chunk_028",
+    "target": "sentinel",
+    "context": "doc_001_chunk_028 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_028"
+  },
+  {
+    "source": "doc_001_chunk_028",
+    "target": "priya",
+    "context": "doc_001_chunk_028 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_028"
+  },
+  {
+    "source": "doc_001_chunk_028",
+    "target": "configuration distributor",
+    "context": "doc_001_chunk_028 provides evidence about configuration distributor.",
+    "evidence_chunk_id": "doc_001_chunk_028"
+  },
+  {
+    "source": "doc_001_chunk_028",
+    "target": "maya",
+    "context": "doc_001_chunk_028 provides evidence about maya.",
+    "evidence_chunk_id": "doc_001_chunk_028"
+  },
+  {
+    "source": "doc_001_chunk_028",
+    "target": "security and tenant isolation testing because",
+    "context": "doc_001_chunk_028 provides evidence about security and tenant isolation testing because.",
+    "evidence_chunk_id": "doc_001_chunk_028"
+  },
+  {
+    "source": "doc_001_chunk_028",
+    "target": "helios",
+    "context": "doc_001_chunk_028 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_028"
+  },
+  {
+    "source": "priya",
+    "target": "configuration distributor",
+    "context": "After the incident, Priya added lower-bound checks to the Configuration Distributor.",
+    "evidence_chunk_id": "doc_001_chunk_028"
+  },
+  {
+    "source": "doc_001_chunk_029",
+    "target": "security and tenant isolation testing because",
+    "context": "doc_001_chunk_029 provides evidence about security and tenant isolation testing because.",
+    "evidence_chunk_id": "doc_001_chunk_029"
+  },
+  {
+    "source": "doc_001_chunk_029",
+    "target": "helios",
+    "context": "doc_001_chunk_029 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_029"
+  },
+  {
+    "source": "doc_001_chunk_029",
+    "target": "one",
+    "context": "doc_001_chunk_029 provides evidence about one.",
+    "evidence_chunk_id": "doc_001_chunk_029"
+  },
+  {
+    "source": "doc_001_chunk_030",
+    "target": "priya",
+    "context": "doc_001_chunk_030 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_030"
+  },
+  {
+    "source": "doc_001_chunk_030",
+    "target": "maya",
+    "context": "doc_001_chunk_030 provides evidence about maya.",
+    "evidence_chunk_id": "doc_001_chunk_030"
+  },
+  {
+    "source": "doc_001_chunk_030",
+    "target": "administrative console",
+    "context": "doc_001_chunk_030 provides evidence about administrative console.",
+    "evidence_chunk_id": "doc_001_chunk_030"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "administrative console",
+    "context": "doc_001_chunk_031 provides evidence about administrative console.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "sentinel",
+    "context": "doc_001_chunk_031 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "security archive",
+    "context": "doc_001_chunk_031 provides evidence about security archive.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "deployment plan northstar",
+    "context": "doc_001_chunk_031 provides evidence about deployment plan northstar.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "helios",
+    "context": "doc_001_chunk_031 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "meridian",
+    "context": "doc_001_chunk_031 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "orion",
+    "context": "doc_001_chunk_031 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_031",
+    "target": "shadow",
+    "context": "doc_001_chunk_031 provides evidence about shadow.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "sentinel",
+    "target": "security archive",
+    "context": "Sentinel forwards these audit records to the Security Archive, where they are retained for one year.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "During the first phase, Meridian continued reading from Orion while also sending shadow lookups to Helios.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "meridian",
+    "target": "orion",
+    "context": "During the first phase, Meridian continued reading from Orion while also sending shadow lookups to Helios.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "orion",
+    "target": "shadow",
+    "context": "During the first phase, Meridian continued reading from Orion while also sending shadow lookups to Helios.",
+    "evidence_chunk_id": "doc_001_chunk_031"
+  },
+  {
+    "source": "doc_001_chunk_032",
+    "target": "shadow",
+    "context": "doc_001_chunk_032 provides evidence about shadow.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "doc_001_chunk_032",
+    "target": "any",
+    "context": "doc_001_chunk_032 provides evidence about any.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "doc_001_chunk_032",
+    "target": "sentinel",
+    "context": "doc_001_chunk_032 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "doc_001_chunk_032",
+    "target": "helios",
+    "context": "doc_001_chunk_032 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "doc_001_chunk_032",
+    "target": "orion",
+    "context": "doc_001_chunk_032 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "doc_001_chunk_032",
+    "target": "owen",
+    "context": "doc_001_chunk_032 provides evidence about owen.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "any",
+    "target": "sentinel",
+    "context": "Any mismatch was recorded by Sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "shadow",
+    "target": "helios",
+    "context": "After the shadow phase produced an acceptable mismatch rate, five percent of customer traffic began using Helios responses.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "any",
+    "target": "owen",
+    "context": "Owen had authority to pause or reverse the rollout if any safety threshold was exceeded.",
+    "evidence_chunk_id": "doc_001_chunk_032"
+  },
+  {
+    "source": "doc_001_chunk_033",
+    "target": "owen",
+    "context": "doc_001_chunk_033 provides evidence about owen.",
+    "evidence_chunk_id": "doc_001_chunk_033"
+  },
+  {
+    "source": "doc_001_chunk_033",
+    "target": "orion",
+    "context": "doc_001_chunk_033 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_033"
+  },
+  {
+    "source": "doc_001_chunk_033",
+    "target": "priya",
+    "context": "doc_001_chunk_033 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_033"
+  },
+  {
+    "source": "doc_001_chunk_033",
+    "target": "helios",
+    "context": "doc_001_chunk_033 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_033"
+  },
+  {
+    "source": "priya",
+    "target": "helios",
+    "context": "Priya adjusted partition weighting so those customers were distributed more evenly across Helios nodes.",
+    "evidence_chunk_id": "doc_001_chunk_033"
+  },
+  {
+    "source": "doc_001_chunk_034",
+    "target": "priya",
+    "context": "doc_001_chunk_034 provides evidence about priya.",
+    "evidence_chunk_id": "doc_001_chunk_034"
+  },
+  {
+    "source": "doc_001_chunk_034",
+    "target": "helios",
+    "context": "doc_001_chunk_034 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_034"
+  },
+  {
+    "source": "doc_001_chunk_034",
+    "target": "meridian",
+    "context": "doc_001_chunk_034 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_034"
+  },
+  {
+    "source": "doc_001_chunk_034",
+    "target": "orion",
+    "context": "doc_001_chunk_034 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_034"
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "At full deployment, Meridian uses Helios as its normal metadata source.",
+    "evidence_chunk_id": "doc_001_chunk_034"
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "If Helios becomes unavailable, the controlled fallback path preserves limited operation while protecting Orion from uncontrolled traffic.",
+    "evidence_chunk_id": "doc_001_chunk_034"
+  },
+  {
+    "source": "doc_001_chunk_035",
+    "target": "helios",
+    "context": "doc_001_chunk_035 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_035"
+  },
+  {
+    "source": "doc_001_chunk_035",
+    "target": "orion",
+    "context": "doc_001_chunk_035 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_035"
+  },
+  {
+    "source": "doc_001_chunk_035",
+    "target": "operational lessons the cache modernization",
+    "context": "doc_001_chunk_035 provides evidence about operational lessons the cache modernization.",
+    "evidence_chunk_id": "doc_001_chunk_035"
+  },
+  {
+    "source": "doc_001_chunk_035",
+    "target": "project",
+    "context": "doc_001_chunk_035 provides evidence about project.",
+    "evidence_chunk_id": "doc_001_chunk_035"
+  },
+  {
+    "source": "doc_001_chunk_035",
+    "target": "each",
+    "context": "doc_001_chunk_035 provides evidence about each.",
+    "evidence_chunk_id": "doc_001_chunk_035"
+  },
+  {
+    "source": "helios",
+    "target": "orion",
+    "context": "Helios reduced Orion load, but it also introduced invalidation, version tracking, partition management, failover, warm-up behavior, and new security requirements.",
+    "evidence_chunk_id": "doc_001_chunk_035"
+  },
+  {
+    "source": "doc_001_chunk_036",
+    "target": "march",
+    "context": "doc_001_chunk_036 provides evidence about march.",
+    "evidence_chunk_id": "doc_001_chunk_036"
+  },
+  {
+    "source": "doc_001_chunk_036",
+    "target": "orion",
+    "context": "doc_001_chunk_036 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_036"
+  },
+  {
+    "source": "doc_001_chunk_036",
+    "target": "northstar",
+    "context": "doc_001_chunk_036 provides evidence about northstar.",
+    "evidence_chunk_id": "doc_001_chunk_036"
+  },
+  {
+    "source": "doc_001_chunk_037",
+    "target": "northstar",
+    "context": "doc_001_chunk_037 provides evidence about northstar.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "doc_001_chunk_037",
+    "target": "changes",
+    "context": "doc_001_chunk_037 provides evidence about changes.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "doc_001_chunk_037",
+    "target": "sentinel",
+    "context": "doc_001_chunk_037 provides evidence about sentinel.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "doc_001_chunk_037",
+    "target": "orion",
+    "context": "doc_001_chunk_037 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "doc_001_chunk_037",
+    "target": "helios",
+    "context": "doc_001_chunk_037 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "doc_001_chunk_037",
+    "target": "meridian",
+    "context": "doc_001_chunk_037 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "sentinel",
+    "target": "orion",
+    "context": "Sentinel continues to monitor cache hit rate, invalidation delay, record lifetime, node health, fallback usage, and Orion query volume.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "helios",
+    "target": "meridian",
+    "context": "Helios improved dashboard speed because it reused metadata across Meridian workers.",
+    "evidence_chunk_id": "doc_001_chunk_037"
+  },
+  {
+    "source": "doc_001_chunk_038",
+    "target": "helios",
+    "context": "doc_001_chunk_038 provides evidence about helios.",
+    "evidence_chunk_id": "doc_001_chunk_038"
+  },
+  {
+    "source": "doc_001_chunk_038",
+    "target": "meridian",
+    "context": "doc_001_chunk_038 provides evidence about meridian.",
+    "evidence_chunk_id": "doc_001_chunk_038"
+  },
+  {
+    "source": "doc_001_chunk_038",
+    "target": "orion",
+    "context": "doc_001_chunk_038 provides evidence about orion.",
+    "evidence_chunk_id": "doc_001_chunk_038"
+  },
+  {
+    "source": "doc_001_chunk_038",
+    "target": "aurora",
+    "context": "doc_001_chunk_038 provides evidence about aurora.",
+    "evidence_chunk_id": "doc_001_chunk_038"
+  },
+  {
+    "source": "orion",
+    "target": "aurora",
+    "context": "It remained reliable because Orion stayed authoritative, Aurora carried durable invalidations, version numbers handled reordered events, request coalescing reduced duplicate fills, and rate-limited fallback protected the database during failures.",
+    "evidence_chunk_id": "doc_001_chunk_038"
+  }
+]

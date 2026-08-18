@@ -1,0 +1,22 @@
+{
+  "doc_001": {
+    "document_name": "backup.txt",
+    "source_path": "data/backup.txt",
+    "content_hash": "3fa38ab93d783153b90873eb680ebd01029d1492be1f1433fdc7e5bd1279dc53",
+    "nodes_path": "data/graphs/doc_001/nodes.json",
+    "edges_path": "data/graphs/doc_001/edges.json",
+    "embedding_model": "hash-384",
+    "graph_backend": "heuristic",
+    "updated_at": "2026-08-18T04:55:52.933636+00:00"
+  },
+  "doc_002": {
+    "document_name": "sample_client_rollout.txt",
+    "source_path": "data/sample_client_rollout.txt",
+    "content_hash": "d19370d5623754a2a7ee97a2c4170236b8ee879eae7f04f85d1f80eba58adf1c",
+    "nodes_path": "data/graphs/doc_002/nodes.json",
+    "edges_path": "data/graphs/doc_002/edges.json",
+    "embedding_model": "hash-384",
+    "graph_backend": "heuristic",
+    "updated_at": "2026-08-18T04:55:53.312411+00:00"
+  }
+}

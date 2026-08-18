@@ -1,0 +1,38 @@
+[
+  {
+    "query": "What percentage of Meridian metadata queries duplicated a recent request?",
+    "expected_chunks": ["doc_001_chunk_006"]
+  },
+  {
+    "query": "How many replica nodes does each Helios partition have?",
+    "expected_chunks": ["doc_001_chunk_008"]
+  },
+  {
+    "query": "How does the invalidation pipeline remain durable and reject stale updates?",
+    "expected_chunks": ["doc_001_chunk_013", "doc_001_chunk_014", "doc_001_chunk_015", "doc_001_chunk_016"]
+  },
+  {
+    "query": "What did Maya Chen design and what did Luis Romero evaluate?",
+    "expected_chunks": ["doc_001_chunk_003"]
+  },
+  {
+    "query": "How were the Atlas Gateway and Meridian Analytics Engine connected?",
+    "expected_chunks": ["doc_001_chunk_000", "doc_001_chunk_003", "doc_001_chunk_004"]
+  },
+  {
+    "query": "How did Helios help both Northstar and the Cedar Client Rollout, and how was rollout safety monitored?",
+    "expected_chunks": ["doc_001_chunk_002", "doc_001_chunk_038", "doc_002_chunk_000", "doc_002_chunk_001"]
+  },
+  {
+    "query": "How does AG route events toward the analytics engine?",
+    "expected_chunks": ["doc_001_chunk_000", "doc_001_chunk_003", "doc_001_chunk_004"]
+  },
+  {
+    "query": "How long is the Helios fetch timeout?",
+    "expected_chunks": ["doc_001_chunk_019"]
+  },
+  {
+    "query": "Who won the 2030 World Cup?",
+    "expected_chunks": []
+  }
+]

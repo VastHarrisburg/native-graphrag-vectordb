@@ -1,0 +1,61 @@
+[
+  {
+    "name": "doc_002_chunk_000",
+    "type": "chunk",
+    "document_id": "doc_002",
+    "content": "The Cedar Client Rollout connected the customer dashboard service to the Northstar metadata platform. Cedar reads processed telemetry from the Meridian Analytics Engine and displays alerts to warehouse operators. During the rollout, the team found that repeated permission lookups made dashboard refreshes inconsistent. Cedar adopted Helios-backed metadata lookups, which reduced repeated requests to the Orion Metadata Store. The rollout also sent cache-hit, cache-miss, and fallback metrics to the Sentinel Observability Service.",
+    "source": "data/sample_client_rollout.txt"
+  },
+  {
+    "name": "cedar client rollout",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "northstar",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "cedar",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "meridian analytics engine",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "helios backed",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "orion metadata store",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "sentinel observability service",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "doc_002_chunk_001",
+    "type": "chunk",
+    "document_id": "doc_002",
+    "content": "The rollout also sent cache-hit, cache-miss, and fallback metrics to the Sentinel Observability Service. Sentinel alerts allowed Owen Brooks to pause the Cedar rollout when fallback traffic exceeded its safety threshold.",
+    "source": "data/sample_client_rollout.txt"
+  },
+  {
+    "name": "sentinel",
+    "type": "entity",
+    "document_id": "doc_002"
+  },
+  {
+    "name": "owen brooks",
+    "type": "entity",
+    "document_id": "doc_002"
+  }
+]

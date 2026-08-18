@@ -1,0 +1,4 @@
+{
+  "embedding_model": "hash-384",
+  "dimensions": 384
+}

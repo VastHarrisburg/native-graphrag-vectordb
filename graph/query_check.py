@@ -33,11 +33,13 @@ class QueryAnalysis(BaseModel):
 class Analyzer:
     def __init__(
         self,
-        project_root: str | Path = (
-            "/Users/harishkrishnan/native-graphrag-vectordb"
-        ),
+        project_root: str | Path | None = None,
     ) -> None:
-        self.project_root = Path(project_root).expanduser().resolve()
+        self.project_root = (
+            Path(project_root).expanduser().resolve()
+            if project_root
+            else Path(__file__).resolve().parents[1]
+        )
 
         self.prompt_file = (
             self.project_root / "graph/Query_Analyzer_Prompt.txt"

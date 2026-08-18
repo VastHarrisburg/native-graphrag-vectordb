@@ -748,15 +748,12 @@ class Model:
 
     def __init__(
         self,
-        project_root: str | Path = (
-            "/Users/harishkrishnan/"
-            "native-graphrag-vectordb"
-        ),
+        project_root: str | Path | None = None,
     ) -> None:
         self.project_root = (
-            Path(project_root)
-            .expanduser()
-            .resolve()
+            Path(project_root).expanduser().resolve()
+            if project_root
+            else Path(__file__).resolve().parents[1]
         )
 
         self.prompt_file = (

@@ -1,123 +1,222 @@
 # Native GraphRAG VectorDB
 
-An experimental hybrid retrieval project that combines a Rust command-line
-interface and cosine-similarity search with Python-based embeddings and graph
-extraction.
+A working hybrid retrieval prototype that combines native Rust cosine-similarity
+search with document-specific Python knowledge graphs. Documents are ingested
+once, identified by their content hash, and queried through one CLI.
 
-The repository currently uses JSON files as its storage layer. It is a
-prototype for exploring the pieces of a GraphRAG pipeline rather than a
-production-ready vector database.
+## What works
 
-## What is included
+- Stable `doc_NNN` identifiers across chunks, vectors, search results, graphs,
+  sources, and citations
+- SHA-256 duplicate detection and update-in-place for changed documents
+- Sentence-based chunks with overlap
+- Sentence Transformer embeddings, plus a deterministic offline hash backend
+- Cosine-similarity search in Rust
+- One separately stored NetworkX-compatible `MultiDiGraph` per document
+- Graph selection from each document's maximum semantic chunk score
+- Query entity and acronym matching followed by bounded two-hop BFS
+- Semantic/graph evidence merging and `chunk_id` deduplication
+- Optional grounded OpenAI answer generation with validated citation IDs
+- Safe extractive and insufficient-evidence fallback without an API key
+- Document removal across every store
+- Automated lifecycle/traversal tests and a semantic-versus-hybrid benchmark
 
-- Sentence-based document chunking with configurable overlap
-- Embeddings from `sentence-transformers/all-MiniLM-L6-v2`
-- JSON-backed chunks, vectors, entities, and relationships
-- Cosine-similarity search implemented in Rust
-- Experimental entity and relationship extraction with structured OpenAI
-  responses
-- NetworkX-based graph loading and traversal experiments
-- Sample data describing a fictional cache-modernization project
-
-## Project structure
+## Architecture
 
 ```text
-src/       Rust CLI, storage helpers, vector math, and similarity search
-scripts/   Python chunking and sentence-transformer embedding pipeline
-graph/     Experimental graph extraction, query analysis, and traversal code
-data/      Sample documents and generated JSON artifacts
+Ingest
+document -> SHA-256 -> registry lookup -> chunks -> embeddings
+         -> per-document entity/relationship graph -> registry
+
+Query
+question -> query embedding -> Rust vector search -> top document IDs
+         -> entity matching -> each selected graph -> two-hop traversal
+         -> deduplicate combined evidence -> grounded answer + citations
 ```
+
+Rust owns vector scoring and the public CLI. Python owns chunking, embedding
+generation, graph persistence/traversal, evidence assembly, and optional model
+calls. JSON remains the storage layer so every stage is inspectable.
 
 ## Requirements
 
-- A Rust toolchain that supports Rust 2024 edition (Rust 1.85 or newer)
-- Python 3
-- `sentence-transformers` for the vector pipeline
-- Optional graph dependencies: `networkx`, `python-dotenv`, `pydantic`,
-  `langchain`, and `langchain-openai`
-- An OpenAI API key only when running the model-backed graph scripts
-
-## Quick start
-
-Clone the repository and enter the project directory:
-
-```bash
-git clone https://github.com/VastHarrisburg/native-graphrag-vectordb.git
-cd native-graphrag-vectordb
-```
-
-Create a Python environment and install the embedding dependency:
+- Rust 1.85 or newer
+- Python 3.10 or newer
+- The dependencies in `requirements.txt`
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install sentence-transformers
+python -m pip install -r requirements.txt
+cargo build
 ```
 
-Check that the Rust project builds:
+For OpenAI-backed graph extraction or answer generation:
 
 ```bash
-cargo check
+cp .env.example .env
+# Add OPENAI_API_KEY to .env
 ```
 
-Display statistics for the checked-in sample artifacts:
+`OPENAI_MODEL` is configurable in `.env`. The integration uses the Responses
+API with a Pydantic structured output and validates model citations against the
+evidence supplied to the model.
+
+## Upload and ingest documents
+
+The normal quality path uses Sentence Transformers for embeddings and the
+local heuristic graph builder. Use `upload` to add a document; `ingest` remains
+available as an equivalent command for pipeline-oriented workflows:
+
+```bash
+cargo run -- upload data/backup.txt
+cargo run -- upload data/sample_client_rollout.txt
+```
+
+For a fast, deterministic offline run:
+
+```bash
+cargo run -- upload data/backup.txt --embedding-backend hash
+```
+
+To use model-backed entity and relationship extraction during ingestion:
+
+```bash
+cargo run -- upload data/backup.txt --graph-backend openai
+```
+
+Useful options are `--chunk-size 5`, `--overlap 1`,
+`--embedding-backend auto|sentence-transformers|hash`, and
+`--graph-backend heuristic|openai`.
+Use `--force` to deliberately rebuild an unchanged document.
+
+Ingesting identical content returns `"status": "reused"`. If the same source
+path changes, its existing document ID is retained while its chunks, vectors,
+and graph are rebuilt.
+
+## Query
+
+One command runs embedding, native Rust vector search, semantic graph
+selection, two-hop traversal, evidence merging, and answer generation:
+
+```bash
+cargo run -- query "How did Helios reduce traffic to Orion?"
+```
+
+If `OPENAI_API_KEY` is absent, the command uses a source-grounded extractive
+fallback. Force that behavior with `--no-llm`:
+
+```bash
+cargo run -- query \
+  "How were the Atlas Gateway and Meridian Analytics Engine connected?" \
+  --no-llm
+```
+
+When the index was ingested with the hash backend, use the same backend for a
+fully explicit run:
+
+```bash
+cargo run -- query "How long is the Helios fetch timeout?" \
+  --embedding-backend hash --no-llm
+```
+
+The JSON result contains `answer`, validated `citations`, retrieval counts,
+semantic results, per-document graph results, deduplicated combined context,
+sources, and vector/graph/total timing. Unsupported questions return an
+insufficient-evidence answer with no citations.
+
+## Storage
+
+```text
+data/
+├── graph_registry.json
+├── index_metadata.json
+├── chunks.json
+├── vectors.json
+└── graphs/
+    ├── doc_001/
+    │   ├── nodes.json
+    │   └── edges.json
+    └── doc_002/
+        ├── nodes.json
+        └── edges.json
+```
+
+A chunk has one canonical shape:
+
+```json
+{
+  "chunk_id": "doc_001_chunk_003",
+  "document_id": "doc_001",
+  "text": "...",
+  "chunk_index": 3,
+  "source": "data/backup.txt"
+}
+```
+
+The registry maps content hashes and sources to graph files. Graph node and
+edge arrays retain the prototype's `name`, `type`, `source`, `target`, and
+`context` fields; evidence edges also carry `evidence_chunk_id`.
+
+## Manage the index
 
 ```bash
 cargo run -- stats
+cargo run -- remove-doc doc_002
 ```
 
-To try vector search, first place a source document at `data/read.txt`. The
-included fictional document can be used as a sample:
+`remove-doc` removes the document's chunks, vectors, graph files, and registry
+entry. It accepts a unique document ID, source path, or document name.
+
+## Tests
 
 ```bash
-cp data/backup.txt data/read.txt
-cargo run -- search-vector \
-  "How did the cache reduce database traffic?" 2 1 data/read.txt
+cargo test
+python -m unittest discover -s tests -v
 ```
 
-The search command regenerates `data/chunks.json`, `data/vectors.json`, and
-`data/query_vector.json`, then returns the three highest-scoring chunk IDs.
-The first embedding run may take longer while the sentence-transformer model
-is downloaded.
+The tests cover duplicate ingestion, changed documents, removal, stable IDs,
+one-hop and two-hop BFS, graph limits, multiple edges, aliases, disconnected
+and unknown entities, empty/missing graphs, document selection, evidence
+deduplication, and valid source citations.
 
-## Experimental graph pipeline
+## Evaluation and benchmark
 
-The files in `graph/` explore extracting entities and directed relationships,
-merging them into JSON graph storage, deciding when graph retrieval is useful,
-and analyzing a query for traversal direction.
-
-Install the optional dependencies:
+`evaluation/questions.json` contains direct, one-chunk, multi-chunk,
+relationship, two-hop, multi-document, alias, no-entity, and unsupported
+questions with expected evidence chunks.
 
 ```bash
-python -m pip install \
-  networkx python-dotenv pydantic langchain langchain-openai
+cargo run -- benchmark evaluation/questions.json --embedding-backend hash
 ```
 
-Create a local `.env` file (it is ignored by Git):
+The benchmark compares semantic-only with semantic-plus-graph retrieval and
+reports evidence recall, precision, vector latency, graph latency, total
+latency, returned chunk IDs, and context size. On the checked-in two-document
+hash index, the current nine-query fixture measured mean evidence recall of
+`0.694` for semantic-only and `0.907` for hybrid retrieval. These small local
+numbers demonstrate behavior, not production performance; rerun them on the
+target machine and with Sentence Transformer embeddings before publishing
+performance claims.
 
-```dotenv
-OPENAI_API_KEY=your_api_key_here
+## Project structure
+
+```text
+src/          Rust CLI, storage models, vector math, and search
+scripts/      Chunking, embeddings, ingestion, and query orchestration
+graph/        Registry, extraction, loading, entity matching, and traversal
+tests/        Python unit and integration tests
+evaluation/   Benchmark questions and expected chunks
+data/         Sample documents and generated inspectable stores
 ```
 
-The graph scripts are under active development and currently contain
-prototype defaults, including local project paths and sample input filenames.
-Review those defaults before running them in another checkout.
+## Limitations
 
-## Current limitations
-
-- Persistence is file-based and does not provide transactions or concurrent
-  access controls.
-- Vector search loads all embeddings into memory and sorts every result.
-- The CLI and graph components are not yet connected into one end-to-end
-  GraphRAG query flow.
-- Generated sample artifacts are committed for inspection and demonstration.
-
-## Development
-
-Run the Rust compiler checks with:
-
-```bash
-cargo check
-```
-
-Keep secrets in `.env`; the file is excluded by `.gitignore`.
+- JSON storage has no transactions or concurrent writer support.
+- Rust search loads and sorts all vectors in memory.
+- Heuristic graph extraction favors reproducibility over extraction quality;
+  use `--graph-backend openai` for model-backed extraction.
+- Alias matching uses exact names, acronyms, token overlap, and conservative
+  fuzzy matching rather than an alias model.
+- There is no clustering, classifier routing, cross-document graph merge,
+  frontend, cloud deployment, or distributed processing in version 1.
